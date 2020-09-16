@@ -1,0 +1,56 @@
+.page-index {
+    background: #f2f5f7;
+}
+.help-container {
+    background: transparent;
+    position: relative;
+    
+    
+}
+.help-container body, div, p, .tabs ul li.cm-active a, .tabs ul li.cm-active a:visited, .tabs ul li.cm-active a:hover, .tabs ul li.cm-active a:active, .checkout-sidebox-title, .demo-site-panel select {
+    color: #000000;
+}
+
+.help-container body, div, span, li, td, input[type="text"], input[type="password"], textarea, select, .scroll-y, .ui-widget select, .ui-widget textarea, .ui-widget, .ui-dialog .ui-dialog-title, a, a:visited, a:active, .cm-popup-title:hover > a, .cm-popup-title.unlogged a, .cm-popup-title.logged a, .minicart-title, ul.dropdown-multicolumns li a {
+    font: 13px "Roboto",Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+.help-container a, b, body, div, form, h2, h3, h4, html, i, iframe, img, label, li, object, p, span, strong, table, tbody, td, tr, ul {
+    border: 0;
+    /* font-size: 100%; */
+    margin: 0;
+    padding: 0;
+}
+
+.top-contain{ 
+        background: #F3F3F3;
+        padding: 7px 0; 
+}
+.top-contain ::before, .top-contain::after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.top-contain::after {
+    clear: both;
+}
+.top-inside {
+    width: 1180px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.top-contain ul li.support{
+    position: relative;
+    padding-right: 25px;
+}
+.top-contain ul li:first-child {
+    padding-left: 0;
+}
+.top-contain ul li{
+    float: left;
+    padding: 0 18px;
+    font-size: 12px;
+    /* border-left: 1px solid #ffffff; */
+    border-left: none;
+}
