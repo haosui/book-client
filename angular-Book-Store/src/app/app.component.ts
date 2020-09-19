@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {BookList} from './book/Book-Mock';
+import { HighBookList, NewBookList} from './book/Book-Mock';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,6 @@ import {BookList} from './book/Book-Mock';
 })
 export class AppComponent {
   title = 'Book-Store';
-  books = BookList;
+  hbooks = HighBookList;
+  nbooks = NewBookList;
 }

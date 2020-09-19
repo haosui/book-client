@@ -5,4 +5,5 @@ export interface Book {
     Description: string;
     PriceBeforsale: number;
     PriceAfterSale: number;
+    PathImage: string;
 }
