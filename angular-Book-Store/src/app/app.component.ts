@@ -8,6 +8,4 @@ import { HighBookList, NewBookList} from './book/Book-Mock';
 })
 export class AppComponent {
   title = 'Book-Store';
-  hbooks = HighBookList;
-  nbooks = NewBookList;
 }
