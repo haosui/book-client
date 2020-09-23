@@ -1,13 +1,4 @@
-/*
-	Book Store Sass Theme
-	Author: Vinay Reddy
-	version: 0.0.1
-*/
-/* BASE */
-/* Font family */
-/* color */
-/* Font size */
-/* mixin */
+
 body {
     margin: 0px;
     padding: 0px;
@@ -157,7 +148,7 @@ body {
         font-size: 12px; }
   header .cart {
     padding: 0 10px;
-    margin-right: 10px;
+    margin-right: px;
     position: relative;
     margin-top: 2px !important; }
     header .cart .quntity {
@@ -526,7 +517,7 @@ body {
   
     .container {
       width: 100%;
-      padding: 0 20px;
+      padding:  20px;
       max-width: 100%; }
   
     .recent-book-sec .row {
@@ -556,17 +547,17 @@ body {
       line-height: 46px; } }
   @media only screen and (max-width: 800px) {
     header .header-top h5 {
-      font-size: 12px; }
+      font-size: 24px; }
   
     header .header-top .ph-number {
-      font-size: 12px; }
+      font-size: 24px; }
   
     header .main-menu {
       padding: 20px 0; }
   
     header .main-menu .navbar-light .navbar-nav .navbar-item {
-      padding: 0;
-      margin-bottom: 10px; }
+      padding: 10;
+      margin-bottom: 20px; }
   
     header .main-menu .navbar-light .navbar-nav .navbar-item:after {
       display: none; }
