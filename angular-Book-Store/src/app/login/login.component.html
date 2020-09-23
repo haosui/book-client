@@ -1,0 +1,63 @@
+<div class="container">
+  <h1 class="form-title"> <span>ĐĂNG NHẬP</span> </h1>
+    <form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+      <div class="p-grid p-fluid">
+        <h4>Tên đăng nhập</h4>
+        <div class="p-col-12 p-md-12">
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+            <input type="text" pInputText placeholder="Username" formControlName="username"
+                  [ngClass] = "{'is-invalid': submitted && f.username.errors}">      
+          </div>
+          <div *ngIf="submitted && f.username.errors" class="p-invalid">
+            <small *ngIf="f.username.errors.required">Vui lòng nhập tên người dùng !</small>
+          </div>
+          <div *ngIf="!(submitted && f.username.errors)" class="p-invalid">
+            <small>&nbsp;</small>
+          </div>
+        </div>
+        <h4>Mật khẩu</h4>
+        <div class="p-col-12 p-md-12">
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+              <input pPassword type="password" placeholder="Password" formControlName="password"
+              [ngClass] = "{'is-invalid': submitted && f.password.errors}" 
+              />
+            </div>
+            <div *ngIf="submitted && f.password.errors" class="p-invalid">
+              <small *ngIf="f.password.errors.required">Vui lòng nhập mật khẩu !</small>
+              <small *ngIf="f.password.errors.minlength">Mật khẩu có ít nhất 6 kí tự !</small>
+            </div>
+            <div *ngIf="!(submitted && f.password.errors)" class="p-invalid">
+              <small>&nbsp;</small>
+            </div>
+        </div>
+        <div class="p-formgroup-inline">
+          <div class="p-field">
+            <div class="p-field-checkbox">
+                <p-checkbox binary="true" inputId="binary"></p-checkbox>
+                <a>nhớ thông tin</a>
+            </div>
+         </div>
+        <div class="p-field">
+          <a>quên mật khẩu !</a>
+        </div>
+        </div>
+        <div class="p-col-12 p-md-12">
+          <button pButton pRipple type="submit" label="Đăng nhập" style="background-color: #fcba68;"></button>
+          Chưa có tài khoản ? <a routerLink="/register" routerLinkActive="active"  style="color: #fcba68;"> Đăng kí ngay! </a>
+        </div>
+      </div>
+    </form>
+      <div class="social-login-box">
+        <span class="title-footer">Hoặc đăng nhập bằng:</span>
+        <div class="social-login-icons">
+            <a class="cm-login-provider" data-idp="google">
+                <img src="https://www.vinabook.com/design/themes/vinabook_v5/media/images/addons/hybrid_auth/images/google_signin_dark.png" alt="google" title="google">
+            </a>
+            <a class="cm-login-provider" data-idp="facebook">
+                <img src="https://www.vinabook.com/design/themes/vinabook_v5/media/images/addons/hybrid_auth/images/facebook_signin_dark.png" alt="facebook" title="facebook">
+            </a>
+        </div>
+      </div>  
+</div>
