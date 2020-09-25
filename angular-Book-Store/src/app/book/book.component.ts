@@ -16,22 +16,17 @@ export class BookComponent implements OnInit {
 
 
 
-  total = 0;
 
   constructor() {
    }
 
   ngOnInit(): void {
 
-    if (localStorage.getItem('da')) {
-
-    }
-
-    else {
+   
 
     localStorage.setItem('da', JSON.stringify(this.CartBookList));
     console.log(JSON.parse(localStorage.getItem('da')));
-    }
+    
   }
 
 

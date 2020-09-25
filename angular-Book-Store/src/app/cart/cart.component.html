@@ -92,12 +92,14 @@
                               <div class="number-cart-page-right"><span class="price"> {{total}}.000VNĐ</span></div>
                             </div>
                             <div class="checkout-type-button-cart" style="text-align: center;">
+                              <a [routerLink]="['/checkout']" >
                               <div class="method-button-cart">
-                                <button type="button" title="Thanh toán" class="button btn-proceed-checkout btn-checkout" onclick="window.location = 'localhost:4200';"><span><span>Thanh toán</span></span></button>
+                                <button type="button" title="Thanh toán" class="button btn-proceed-checkout btn-checkout"><span><span>Thanh toán</span></span></button>
                               
                                 <div class="fhs-no-checkout" style="display:none;"></div>
   
                               </div>
+                              </a>
                             </div>
                           </div>
                           <div id="fhs_error_message_cart" style="margin-top:10px;background: white;padding:10px;display:none;"></div>
@@ -112,7 +114,5 @@
           </div>
         </div>
       </div>
-    
-
     </div>
   </div>

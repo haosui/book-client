@@ -1,20 +1,18 @@
+
 import { Component, OnInit, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CartBook } from '../cart/cartBook';
-
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.css']
 })
-
-@Injectable()
-export class CartComponent implements OnInit {
-
+export class CheckoutComponent implements OnInit {
 
   cbook: any;
   total = 0;
+  pay = 0;
 
   constructor(private router: Router) {
     let Ob: Array<CartBook> = JSON.parse(localStorage.getItem('da'));
@@ -26,20 +24,16 @@ export class CartComponent implements OnInit {
   }
 
   getPrice(list): void {
+    this.pay = 0;
     this.total = 0;
     for (const iterator of list) {
       this.total += iterator.Price * iterator.numberOrder;
     }
+    this.pay = this.total;
+    this.pay += 15;
   }
 
-  remove(Id: number): void {
-    for (let i = 0; i < this.cbook.length; i++) {
-      if (Id === this.cbook[i].Id) {
-        this.cbook.splice(i, 1);
-      }
-    }
-    localStorage.setItem('da', JSON.stringify(this.cbook));
-    this.getPrice(this.cbook);
-  }
 
 }
+
+

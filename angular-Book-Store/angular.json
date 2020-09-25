@@ -26,10 +26,9 @@
             "styles": [
               "src/styles.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/owl-carousel/owl-carousel/owl.carousel.css"
+              "./node_modules/owl-carousel/owl-carousel/owl.theme.css"
             ],
-            "scripts": ["./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/owl-carousel/owl-carousel/owl.carousel.min.js"]
+            "scripts": ["./node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
             "production": {
