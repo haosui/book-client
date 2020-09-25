@@ -8,11 +8,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
-  
   validateForm: FormGroup;
   submitted = false;
   display: boolean = false;
-
   
   ngOnInit() {
     this.validateForm = this.fb.group({
@@ -20,9 +18,7 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
-
   get f() { return this.validateForm.controls; }
-
   submitForm() {
     this.submitted = true;
     if (this.validateForm.invalid) {
