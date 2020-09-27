@@ -6,11 +6,11 @@
     <title>Book Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#03a6f3">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
-    
 </head>
 
 <body>
@@ -18,24 +18,46 @@
         <div class="header-top">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3"><a href="#" class="web-url">www.bookstore.com</a></div>
                     <div class="col-md-6">
-                        <h5>Mua sắm thả ga với book store, cùng nhiều khuyến mãi hấp dẫn</h5></div>
-                    <div class="col-md-3">
-                        <span class="ph-number">Call : XXX XXX XXX</span>
+                        <div class="left">
+                            <div class="item">
+                                <i class="fas fa-swatchbook"></i>
+                                <h5>90.000 tựa sách</h5>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-truck-moving"></i>
+                                <h5>Miễn phí giao hàng</h5>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span class="ph-number">Hotline: 343 223 444</span>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-md-6" style="text-align: right;"><a href="#" class="web-url">www.bookstore.com</a></div>
+
                 </div>
             </div>
         </div>
+
         <div class="main-menu">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png" alt="logo" width="200" height="33"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <a class="navbar-brand" href="index.html"><img src="../assets/images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">                        <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        
                         <ul class="navbar-nav ml-auto">
+                            <li>
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm..."
+                                        aria-label="Search">
+                                    <span class="fa fa-search"></span>
+                                </form>
+                            </li>
                             <li class="navbar-item active">
                                 <a href="index.html" class="nav-link">Trang chính</a>
                             </li>
@@ -49,6 +71,8 @@
                                 <a href="login.html" class="nav-link">Đăng nhập</a>
                             </li>
                         </ul>
+
+
                     <a [routerLink]="['/cart']" >
                         <div class="cart my-2 my-lg-0">
                             <span>
@@ -58,10 +82,8 @@
                         </div>
                     </a>
                    
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-                            <span class="fa fa-search"></span>
-                        </form>
+                     
+
                     </div>
                 </nav>
             </div>
@@ -145,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </footer>
 </body>
