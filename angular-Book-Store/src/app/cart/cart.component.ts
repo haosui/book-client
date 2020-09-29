@@ -40,6 +40,7 @@ export class CartComponent implements OnInit {
     }
     localStorage.setItem('da', JSON.stringify(this.cbook));
     this.getPrice(this.cbook);
+    window.location.reload();
   }
 
 }
