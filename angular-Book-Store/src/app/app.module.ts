@@ -56,7 +56,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DropdownModule,
     DialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule
   ],
   providers: [BrowserAnimationsModule],
   bootstrap: [AppComponent]
