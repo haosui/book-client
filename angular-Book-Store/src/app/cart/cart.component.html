@@ -1,0 +1,134 @@
+
+
+<div class="col-main">
+    <div class="container">
+      <div class="container-inner">
+
+        
+   
+    <div *ngIf="!isOrder" style="box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);padding: 20px;background-color: #fff;">
+      <div class="page-title">
+        <h1>Giỏ hàng trống</h1>
+      </div>
+      <div class="cart-empty body-mh-300">
+        <div style="text-align: center">
+          <div class="icon-empty-cart">
+            <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/checkout_cart/ico_emptycart.svg" class="center">
+          </div>
+          <p style="font-size:14px;margin: 20px 0;">Chưa có sản phẩm trong giỏ hàng của bạn</p>
+        
+    
+          <a [routerLink]="['/home']"> <button class="button-shopping" type="button" title="Tiếp tục mua sắm" style="margin:auto">Tiếp tục mua sắm</button></a>
+        </div>
+      </div>
+    </div>
+ 
+
+        
+       
+  
+        <div *ngIf="isOrder" class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="content">
+              <div class="cart">
+                <div class="cart-banner-block fhs-no-mobile-block">
+                </div>
+                <div class="page-title title-buttons">
+                  <h1>Giỏ hàng</h1>
+                </div>
+  
+                  <input name="form_key" type="hidden" value="d2v3HUaCmTb4JMXB">
+                  <div class="cart-ui-content row ">
+                    <div class="col-sm-8 col-xs-12">
+                      <div class="product-cart-left" >
+                        <div class="item-product-cart" *ngFor='let item of cbook'>
+                          <div class="div-of-btn-remove-cart">
+  
+                            <div class="btn-remove-desktop-cart" (click)="remove(item.Id)"></div>
+  
+                          </div>
+  
+                          <div class="img-product-cart">
+                            <a href="localhost:4200/cart" title= {{item.Title}} class="product-image"><img width="150px" style= "height: 220px;" src = {{item.PathImage}}></a>
+                          </div>
+                          <div class="group-product-info">
+                            <div class="info-product-cart">
+                             
+                                <a href="localhost:4200/cart"><h1><b> {{item.Title}} </b></h1> </a>
+                             
+                              <div class="price-originals">
+                                
+                                   <h1> {{item.Price}}.000VNĐ</h1>
+                              
+                              </div>
+  
+                            </div>
+                            <div class="number-product-cart">
+                              <div class="cart-price-total">
+                            
+                                <span class="cart-price">
+  
+                                  <span class="text-price-total">Số lượng</span> </span>
+                              </div>
+                              <div class="product-view-quantity-box">
+                               
+                                <div class="product-view-quantity-box-block">
+                                  
+                                    {{item.numberOrder}}
+                                </div>
+                        
+                              </div>
+                              <div class="cart-price-total">
+                                <span class="text-price-total">Thành tiền</span>
+                                <span class="cart-price">
+  
+                                  <span class="price"> {{item.Price}}.000VNĐ</span> </span>
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                     
+                        <div class="border-product"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 hidden-max-width-992">
+                      <div class="total-cart-right">
+                        <div class="effect-scroll-cart-right">
+  
+                          <div style="clear:both;"></div>
+                          <div class="block-total-cart">
+                            
+                            
+                            <div class="border-product"></div>
+                            <div class="total-cart-page title-final-total">
+                              <div class="title-cart-page-left">
+                                Tổng tiền (đã bao gồm VAT)</div>
+                              <div class="number-cart-page-right"><span class="price"> {{total}}.000VNĐ</span></div>
+                            </div>
+                            <div class="checkout-type-button-cart" style="text-align: center;">
+                              <a [routerLink]="['/checkout']" >
+                              <div class="method-button-cart">
+                                <button type="button" title="Thanh toán" class="button btn-proceed-checkout btn-checkout"><span><span>Thanh toán</span></span></button>
+                              
+                                <div class="fhs-no-checkout" style="display:none;"></div>
+  
+                              </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div id="fhs_error_message_cart" style="margin-top:10px;background: white;padding:10px;display:none;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

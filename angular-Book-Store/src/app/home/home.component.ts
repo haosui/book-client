@@ -12,32 +12,57 @@ export class HomeComponent implements OnInit {
   nbooks = NewBookList;
 
   constructor(
-    ) { }
-    ngOnInit(): void {
-    }
-    customOptions: OwlOptions = {
-      loop: true,
-      mouseDrag: false,
-      touchDrag: false,
-      pullDrag: false,
-      dots: false,
-      navSpeed: 700,
-      navText: ['', ''],
-      responsive: {
-        0: {
-          items: 1
-        },
-        400: {
-          items: 1
-        },
-        740: {
-          items: 1
-        },
-        940: {
-          items: 1
-        }
+  ) { }
+  ngOnInit(): void {
+  }
+  customOptions: OwlOptions = {
+    loop: true,
+    autoplay: true,
+    autoplayTimeout:3000,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1
       },
-      nav: true
-    }
+      400: {
+        items: 1
+      },
+      640: {
+        items: 1
+      },
+      740: {
+        items: 1
+      }
+    },
+    nav: false
+  }
+
+  quotesOption: OwlOptions = {
+    loop: true,
+    autoplay: true,
+    autoplayTimeout:6000,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      640: {
+        items: 1
+      },
+      740: {
+        items: 1
+      }
+    },
+    nav: false
+  }
 
 }

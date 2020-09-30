@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, OnInit , Output, EventEmitter, Inject, Injectable} from '@angular/core';
+
+
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.css']
 })
-
+@Injectable()
 export class BookComponent implements OnInit {
 
-  constructor(
-  ) { }
+
+
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
+
 
 }
