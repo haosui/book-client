@@ -547,7 +547,8 @@
   
   @media only screen and (max-width: 1024px) {
     header .cart .quntity {
-      font-size: 10px; }
+      font-size: 10px;
+      color: tomato;}
   
     .container {
       width: 100%;

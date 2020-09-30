@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
 
   cbook: any;
   total = 0;
+  isOrder: boolean;
 
   constructor(private router: Router) {
     let Ob: Array<CartBook> = JSON.parse(localStorage.getItem('da'));
@@ -27,6 +28,13 @@ export class CartComponent implements OnInit {
 
   getPrice(list): void {
     this.total = 0;
+    console.log(list.length);
+    if (list.length === 0) {
+      this.isOrder = false;
+    }
+    else {
+      this.isOrder = true;
+    }
     for (const iterator of list) {
       this.total += iterator.Price * iterator.numberOrder;
     }
@@ -40,6 +48,7 @@ export class CartComponent implements OnInit {
     }
     localStorage.setItem('da', JSON.stringify(this.cbook));
     this.getPrice(this.cbook);
+    window.location.reload();
   }
 
 }
