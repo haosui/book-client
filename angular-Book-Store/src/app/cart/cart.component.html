@@ -1,18 +1,33 @@
+
+
 <div class="col-main">
     <div class="container">
       <div class="container-inner">
-        <ul id="admin_messages"></ul>
-        <div class="youama-ajaxlogin-cover"></div>
-  
-        <div class="youama-ajaxlogin-loader"></div>
-  
-        <div class="youama-login-window fhs_popup_show">
-       
 
+        
+   
+    <div *ngIf="!isOrder" style="box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);padding: 20px;background-color: #fff;">
+      <div class="page-title">
+        <h1>Giỏ hàng trống</h1>
+      </div>
+      <div class="cart-empty body-mh-300">
+        <div style="text-align: center">
+          <div class="icon-empty-cart">
+            <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/checkout_cart/ico_emptycart.svg" class="center">
+          </div>
+          <p style="font-size:14px;margin: 20px 0;">Chưa có sản phẩm trong giỏ hàng của bạn</p>
+        
+    
+          <a [routerLink]="['/home']"> <button class="button-shopping" type="button" title="Tiếp tục mua sắm" style="margin:auto">Tiếp tục mua sắm</button></a>
         </div>
+      </div>
+    </div>
+ 
+
+        
        
   
-        <div class="row">
+        <div *ngIf="isOrder" class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div id="content">
               <div class="cart">
@@ -116,3 +131,4 @@
       </div>
     </div>
   </div>
+

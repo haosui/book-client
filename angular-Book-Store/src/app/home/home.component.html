@@ -210,7 +210,8 @@
     </section>
     <section class="testimonial-sec">
         <div class="container">
-            <div id="testimonal" class="owl-carousel owl-theme">
+            <owl-carousel-o [options]="quotesOption">
+                <ng-template carouselSlide>
                 <div class="item">
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's printer took a galley of type and Scrambled it to make a type and typesetting
@@ -220,6 +221,8 @@
                         <span class="country">Australia</span>
                     </div>
                 </div>
+                </ng-template>
+                <ng-template carouselSlide>
                 <div class="item">
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's printer took a galley of type and Scrambled it to make a type and typesetting
@@ -229,6 +232,8 @@
                         <span class="country">Australia</span>
                     </div>
                 </div>
+                </ng-template>
+                <ng-template carouselSlide>
                 <div class="item">
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's printer took a galley of type and Scrambled it to make a type and typesetting
@@ -238,6 +243,8 @@
                         <span class="country">Australia</span>
                     </div>
                 </div>
+                </ng-template>
+                <ng-template carouselSlide>
                 <div class="item">
                     <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's printer took a galley of type and Scrambled it to make a type and typesetting
@@ -246,8 +253,9 @@
                         <h4 class="author">Susane Mathew</h4>
                         <span class="country">Australia</span>
                     </div>
-                </div>
             </div>
+            </ng-template>
+        </owl-carousel-o>
         </div>
         <div class="left-quote">
             <img src="../assets/images/left-quote.png" alt="quote">
