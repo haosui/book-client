@@ -13,6 +13,7 @@ export class CheckoutComponent implements OnInit {
   cbook: any;
   total = 0;
   pay = 0;
+  isOrder: boolean;
 
   constructor(private router: Router) {
     let Ob: Array<CartBook> = JSON.parse(localStorage.getItem('da'));
@@ -29,8 +30,13 @@ export class CheckoutComponent implements OnInit {
     for (const iterator of list) {
       this.total += iterator.Price * iterator.numberOrder;
     }
-    this.pay = this.total;
-    this.pay += 15;
+    this.pay = this.total + 15;
+    if (this.total > 0) {
+      this.isOrder = true;
+    }
+    else {
+      this.isOrder = false;
+    }
   }
 
 
