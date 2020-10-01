@@ -6,7 +6,7 @@ import { BookComponent } from './book/book.component';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -27,6 +27,7 @@ import { ReceInfoComponent } from './rece-info/rece-info.component';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    FormsModule,
     CarouselModule,
     BrowserAnimationsModule
   ],
