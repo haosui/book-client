@@ -10,6 +10,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ShopComponent } from './shop/shop.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -20,7 +21,8 @@ import { ShopComponent } from './shop/shop.component';
     HomeComponent,
     CartComponent,
     CheckoutComponent,
-    ShopComponent
+    ShopComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
