@@ -21,22 +21,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="left">
-                            <div class="item">
+                        <div class="row">
+                            <div class=" col-ms-4 item">
                                 <i class="fas fa-swatchbook"></i>
                                 <h5>90.000 tựa sách</h5>
                             </div>
-                            <div class="item">
+                            <div class="col-ms-4 item">
                                 <i class="fas fa-truck-moving"></i>
                                 <h5>Miễn phí giao hàng</h5>
                             </div>
-                            <div class="item">
+                            <div class="col-ms-4 item">
                                 <i class="fas fa-phone-alt"></i>
                                 <span class="ph-number">Hotline: 343 223 444</span>
                             </div>
                         </div>
+                        
                     </div>
-                    <div class="col-md-6" style="text-align: right;"><a href="#" class="web-url">www.bookstore.com</a></div>
+                    <div class="col-md-6" style="text-align: right;"><a href="#" class="web-url"><h5>www.bookstore.com</h5></a></div>
                 </div>
             </div>
         </div>
@@ -56,7 +57,7 @@
                                 <a [routerLink]="['/shop']" class="nav-link">Cửa hàng</a>
                             </li>
                             <li class="navbar-item">
-                                <a href="about.html" class="nav-link">Về chúng tôi</a>
+                                <a [routerLink]="['/about-us']" class="nav-link">Về chúng tôi</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="login.html" class="nav-link">Đăng nhập</a>
@@ -104,7 +105,7 @@
                         <h4>Liên kết qua:</h4>
                         <ul>
                             <li><a href="index.html">Trang chủ</a></li>
-                            <li><a href="about.html">Về chúng tôi</a></li>
+                            <li><a [routerLink]="['/about-us']" >Về chúng tôi</a></li>
                             <li><a href="privacy-policy.html">Chính sách cửa hàng</a></li>
                             <li><a href="terms-conditions.html">Terms</a></li>
                             <li><a href="products.html">Sản phẩm</a></li>
