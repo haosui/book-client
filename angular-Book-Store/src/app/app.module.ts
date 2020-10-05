@@ -35,7 +35,7 @@ import { fakeBackendProvider } from './_helpers';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 import { AlertComponent } from './_components';
-import { LoggedComponent } from './logged/logged.component';
+
 
 
 
@@ -47,7 +47,7 @@ import { LoggedComponent } from './logged/logged.component';
     CartComponent,
     CheckoutComponent,
     AlertComponent,
-    LoggedComponent
+
   ],
   imports: [
     BrowserModule,

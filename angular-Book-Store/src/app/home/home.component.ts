@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
   hbooks = HighBookList;
   nbooks = NewBookList;
   user: User;
-  logged = false;
-  username = "";
+  
 
   constructor(private accountService: AccountService
 
@@ -29,11 +28,7 @@ export class HomeComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    if (this.user !== null) {
-      this.logged = true; 
-      this.username = this.user.firstName;
-    }
-    else this.logged = false
+    
   }
   customOptions: OwlOptions = {
     loop: true,
