@@ -3,14 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-
     <title>Book Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#03a6f3">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 </head>
 
 <body>
@@ -45,9 +42,15 @@
                             <li class="navbar-item">
                                 <a href="about.html" class="nav-link">Về chúng tôi</a>
                             </li>
-                            <li class="navbar-item">
-                                <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="nav-link">Đăng nhập</a>
+                            <li class="navbar-item" *ngIf="user == null">
+                                <a [routerLink]="['/account/login']" routerLinkActive="router-link-active" class="nav-link">Đăng nhập</a>
                             </li>
+                            <li class="navbar-item" *ngIf="user !== null">
+                                <a><i class="pi pi-user"></i> &nbsp; {{user.firstName}} &nbsp; - &nbsp; 
+                                    <a (click)="logout()" style="font-size: 14px;">Đăng xuất</a>
+                                </a>
+                            </li>
+                           
                         </ul>
                     <a [routerLink]="['/cart']" >
                         <div class="cart my-2 my-lg-0">
@@ -67,6 +70,7 @@
         </div>
     </header>
     <section>
+        <alert></alert>
         <router-outlet></router-outlet>
     </section>
     <footer>

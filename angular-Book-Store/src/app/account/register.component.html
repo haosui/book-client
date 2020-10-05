@@ -1,37 +1,66 @@
-<form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-  <h1 class="form-title"> <span>ĐĂNG KÝ TÀI KHOẢN</span> </h1>
-    <div class="p-grid p-fluid">
+<form [formGroup]="form" class="login-form" (ngSubmit)="onSubmit()">
+    <h1 class="form-title"> <span>ĐĂNG KÝ TÀI KHOẢN</span> </h1>
+      <div class="p-grid p-fluid">
         <div class="p-col-12 p-md-12">
-            <label>Tên đăng nhập*</label>
+            <label>Tên*</label>
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-              <input type="text" pInputText placeholder="Username" formControlName="username"
-                    [ngClass] = "{'is-invalid': submitted && f.username.errors}">      
+              <input type="text" pInputText placeholder="First name" formControlName="firstName"
+                    [ngClass] = "{'is-invalid': submitted && f.firstName.errors}">      
             </div>
-            <div *ngIf="submitted && f.username.errors" class="p-invalid">
-              <small *ngIf="f.username.errors.required">Vui lòng nhập tên người dùng !</small>
+            <div *ngIf="submitted && f.firstName.errors" class="p-invalid">
+              <small *ngIf="f.firstName.errors.required">Vui lòng nhập tên người dùng !</small>
             </div>
-            <div *ngIf="!(submitted && f.username.errors)" class="p-invalid">
+            <div *ngIf="!(submitted && f.firstName.errors)" class="p-invalid">
               <small>&nbsp;</small>
             </div>
         </div>
         <div class="p-col-12 p-md-12">
-            <label>Mật khẩu*</label>
+            <label>Họ*</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText placeholder="Last name" formControlName="lastName"
+                    [ngClass] = "{'is-invalid': submitted && f.lastName.errors}">      
+            </div>
+            <div *ngIf="submitted && f.lastName.errors" class="p-invalid">
+              <small *ngIf="f.lastName.errors.required">Vui lòng nhập tên người dùng !</small>
+            </div>
+            <div *ngIf="!(submitted && f.lastName.errors)" class="p-invalid">
+              <small>&nbsp;</small>
+            </div>
+        </div>
+          <div class="p-col-12 p-md-12">
+              <label>Tên đăng nhập*</label>
               <div class="p-inputgroup">
-                <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
-                <input pPassword type="password" placeholder="Password" formControlName="password"
-                [ngClass] = "{'is-invalid': submitted && f.password.errors}" 
-                />
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" pInputText placeholder="Username" formControlName="username"
+                      [ngClass] = "{'is-invalid': submitted && f.username.errors}">      
               </div>
-              <div *ngIf="submitted && f.password.errors" class="p-invalid">
-                <small *ngIf="f.password.errors.required">Vui lòng nhập mật khẩu !</small>
-                <small *ngIf="f.password.errors.minlength">Mật khẩu có ít nhất 6 kí tự !</small>
+              <div *ngIf="submitted && f.username.errors" class="p-invalid">
+                <small *ngIf="f.username.errors.required">Vui lòng nhập tên người dùng !</small>
               </div>
-              <div *ngIf="!(submitted && f.password.errors)" class="p-invalid">
+              <div *ngIf="!(submitted && f.username.errors)" class="p-invalid">
                 <small>&nbsp;</small>
               </div>
-        </div>
-        <div class="p-col-12 p-md-12">
+          </div>
+          <div class="p-col-12 p-md-12">
+              <label>Mật khẩu*</label>
+                <div class="p-inputgroup">
+                  <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                  <input pPassword type="password" placeholder="Password" formControlName="password"
+                  [ngClass] = "{'is-invalid': submitted && f.password.errors}" 
+                  />
+                </div>
+                <div *ngIf="submitted && f.password.errors" class="p-invalid">
+                  <small *ngIf="f.password.errors.required">Vui lòng nhập mật khẩu !</small>
+                  <small *ngIf="f.password.errors.minlength">Mật khẩu có ít nhất 6 kí tự !</small>
+                </div>
+                <div *ngIf="!(submitted && f.password.errors)" class="p-invalid">
+                  <small>&nbsp;</small>
+                </div>
+          </div>
+         
+          <div class="p-col-12 p-md-12">
             <label>Nhập lại mật khẩu*</label>
             <div class="p-inputgroup">
               <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
@@ -91,11 +120,11 @@
               <small>&nbsp;</small>
             </div>
         </div>
-       
-          <div class="p-col-12 p-md-12">
-            <button pButton pRipple type="submit" label="Đăng kí" style="background-image: linear-gradient( to right, rgba(255, 152, 0, 1),
-            rgba(247, 105, 93, 1) ); border-radius: 30px;"></button>
-          </div>
-    </div>
-</form>
-
+            <div class="p-col-12 p-md-12">
+              <button pButton pRipple type="submit" label="Đăng kí" style="background-image: linear-gradient( to right, rgba(255, 152, 0, 1),
+              rgba(247, 105, 93, 1) ); border-radius: 30px;"></button>
+            </div>
+      </div>
+  </form>
+  
+  

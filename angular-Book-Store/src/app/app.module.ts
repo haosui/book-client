@@ -11,8 +11,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 
 import {CheckboxModule} from 'primeng/checkbox';
 import {RadioButtonModule} from 'primeng/radiobutton'
@@ -21,12 +19,24 @@ import {ButtonModule} from 'primeng/button';
 import {RippleModule} from 'primeng/ripple';
 import {TabViewModule} from 'primeng/tabview';
 import {PasswordModule} from 'primeng/password';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
+import {BreadcrumbModule } from 'primeng/breadcrumb';
 import {CalendarModule} from 'primeng/calendar';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {DropdownModule} from 'primeng/dropdown';
 import {DialogModule} from 'primeng/dialog';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+// used to create fake backend
+import { fakeBackendProvider } from './_helpers';
+
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+
+import { AlertComponent } from './_components';
+import { LoggedComponent } from './logged/logged.component';
+
 
 
 @NgModule({
@@ -34,10 +44,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     BookComponent,
     HomeComponent,
-    LoginComponent,
-    RegisterComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    AlertComponent,
+    LoggedComponent
   ],
   imports: [
     BrowserModule,
@@ -57,9 +67,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DialogModule,
     FormsModule,
     ReactiveFormsModule,
-    CarouselModule
+    CarouselModule,
+    BrowserModule,
+    HttpClientModule
+
   ],
-  providers: [BrowserAnimationsModule],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider,
+    BrowserAnimationsModule
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
