@@ -5,14 +5,16 @@ import { first } from 'rxjs/operators';
 
 import { AccountService, AlertService } from '../_services';
 
-@Component({ templateUrl: 'add-edit.component.html' })
+@Component({ templateUrl: 'add-edit.component.html',
+             styleUrls: ['add-edit.component.css']
+})
 export class AddEditComponent implements OnInit {
     form: FormGroup;
     id: string;
     isAddMode: boolean;
     loading = false;
     submitted = false;
-
+    genders: any[];
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -22,6 +24,10 @@ export class AddEditComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+        this.genders = [
+            {name: 'Nam', code: 'M'},
+            {name: 'Nữ', code: 'FM'},
+        ];
         this.id = this.route.snapshot.params['id'];
         this.isAddMode = !this.id;
         
@@ -32,9 +38,12 @@ export class AddEditComponent implements OnInit {
         }
 
         this.form = this.formBuilder.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            username: ['', Validators.required],
+            firstName: ['', [Validators.required]],
+            lastName: ['', [Validators.required]],
+            username: ['', [Validators.required]],
+            phone: ['', [Validators.required, Validators.maxLength(15), Validators.pattern(/^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/)]],
+            gender: ['', [Validators.required]],
+            dob:  [[Validators.required]],
             password: ['', passwordValidators]
         });
 
@@ -88,7 +97,7 @@ export class AddEditComponent implements OnInit {
             .subscribe({
                 next: () => {
                     this.alertService.success('Update successful', { keepAfterRouteChange: true });
-                    this.router.navigate(['../../'], { relativeTo: this.route });
+                    this.router.navigate(['/home']);
                 },
                 error: error => {
                     this.alertService.error(error);

@@ -115,8 +115,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         }
 
         function basicDetails(user) {
-            const { id, username, firstName, lastName } = user;
-            return { id, username, firstName, lastName };
+            const { id, username, firstName, lastName, dob ,phone, gender } = user;
+            return { id, username, firstName, lastName, dob, phone, gender };
         }
 
         function isLoggedIn() {

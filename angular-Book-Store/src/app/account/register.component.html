@@ -74,21 +74,20 @@
               <small>&nbsp;</small>
             </div>
         </div>
-        <div class="p-col-12 p-md-12">
-            <label>Ngày sinh*</label>
-            <div class="p-inputgroup">
-              <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
-              <p-calendar [(ngModel)]="date" [showIcon]="false" inputId="icon" placeholder="Month/Day/Year"
-              formControlName="dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" 
-              ></p-calendar>
-            </div>
-            <div *ngIf="submitted && f.dob.errors" class="p-invalid">
-                <small *ngIf="f.dob.errors.required">Vui lòng nhập ngày sinh !</small>
-            </div>
-            <div *ngIf="!(submitted && f.dob.errors)" class="p-invalid">
-              <small>&nbsp;</small>
-            </div>
-        </div>
+        <div class="p-col-12 p-md-12" style="width:50%">
+          <label>Ngày sinh*</label>
+          <div class="p-inputgroup">
+            <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+            <input type="Date" pInputText placeholder="dob" formControlName="dob"
+                      [ngClass] = "{'is-invalid': submitted && f.dob.errors}"> 
+          </div>
+          <div *ngIf="submitted && f.dob.errors" class="p-invalid">
+              <small *ngIf="f.dob.errors.required">Vui lòng nhập ngày sinh !</small>
+          </div>
+          <div *ngIf="!(submitted && f.dob.errors)" class="p-invalid">
+            <small>&nbsp;</small>
+          </div>
+      </div>
         <div class="p-col-12 p-md-12">
             <label>Số điện thoại*</label>
             <div class="p-inputgroup">
