@@ -1,10 +1,13 @@
 <div class="card m-3">
-    <h5 class="card-header">Angular 8 Reactive Form Validation</h5>
+    <div>
+        <h5 class="card-header">Angular 8 Reactive Form Validation</h5>
+         <button (click) = "onEditt()"> {{strinbuton}}</button>
+    </div>
     <div class="card-body" *ngIf="formdisplayy">
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >          
                 <div class="form-group">
                     <label>Họ và Tên</label>
-                    <input type="text" formControlName="hoten" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.hoten.errors }" />
+                    <input type="text" formControlName="hoten"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.hoten.errors }" />
                     <div *ngIf="submitted && f.hoten.errors" class="invalid-feedback">
                         <div *ngIf="f.hoten.errors.required">Nhập họ tên</div>
                     </div>                    
@@ -70,13 +73,22 @@
                 <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
             </div>
             <div class="text-center">
-                <button class="btn btn-primary mr-1" (click)="onSubmit()">Register</button>
-                <button class="btn btn-secondary" type="reset" (click)="onCance()">Cancel</button>
+                <button class="btn btn-primary mr-1" (click)="onSubmit()">Continue</button>
+                <button class="btn btn-secondary" type="reset" (click)="onCance()">Back</button>
             </div>
 
 
 
               
         </form>
+        
     
+    </div>
+    <div *ngIf= '!formdisplayy'>
+         <div >
+         <p> {{thongtin.ten}}</p>
+         <p>{{thongtin.sdt}} </p>
+         <p>{{thongtin.diachi}}</p>
+        </div>
+    </div>
 </div>
