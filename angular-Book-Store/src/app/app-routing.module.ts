@@ -5,7 +5,8 @@ import { BookComponent } from './book/book.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { ReceInfoComponent} from './rece-info/rece-info.component'
+import { ReceInfoComponent} from './rece-info/rece-info.component';
+import{BookDetailComponent} from'./book/book-detail/book-detail.component'
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -13,6 +14,8 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent},
   {path: 'checkout', component: CheckoutComponent },
   {path: 'cart/info', component: ReceInfoComponent },
+  {path: 'bookdetail', component: BookDetailComponent },
+
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 

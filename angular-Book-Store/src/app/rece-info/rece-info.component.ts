@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig} from 'primeng/api';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-rece-info',
   templateUrl: './rece-info.component.html',
@@ -52,7 +53,7 @@ xa = [
   
 ];
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
   
   
   ngOnInit(){
@@ -69,7 +70,7 @@ xa = [
 
     this.registerForm = this.formBuilder.group({
       
-      acceptTerms: [false, Validators.requiredTrue],
+      acceptTerms: [true, Validators.requiredTrue],
       hoten: [this.thongtin.ten, Validators.required],
       dienthoai: [this.thongtin.sdt, [Validators.required,Validators.pattern("^[0-9]*$"), Validators.minLength(8)]],
 
@@ -110,7 +111,9 @@ onBlurhuyen(self)
     // display form values on success
    this.saveInfo();
 
-
+    alert('Đặt hàng thành công');
+    this.router.navigate(['/home']);
+    
 }
 saveInfo()
 {

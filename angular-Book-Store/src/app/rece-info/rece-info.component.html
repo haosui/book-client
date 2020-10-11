@@ -72,10 +72,7 @@
                 <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
                 <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
             </div>
-            <div class="text-center">
-                <button class="btn btn-primary mr-1" (click)="onSubmit()">Continue</button>
-                <button class="btn btn-secondary" type="reset" (click)="onCance()">Back</button>
-            </div>
+            
 
 
 
@@ -90,5 +87,9 @@
          <p>{{thongtin.sdt}} </p>
          <p>{{thongtin.diachi}}</p>
         </div>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary mr-1" (click)="onSubmit()">Continue</button>
+        <button class="btn btn-secondary" type="reset" (click)="onCance()">Back</button>
     </div>
 </div>

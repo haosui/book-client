@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ReceInfoComponent } from './rece-info/rece-info.component';
+import { BookDetailComponent } from './book/book-detail/book-detail.component';
 
 
 
@@ -21,7 +22,8 @@ import { ReceInfoComponent } from './rece-info/rece-info.component';
     HomeComponent,
     CartComponent,
     CheckoutComponent,
-    ReceInfoComponent
+    ReceInfoComponent,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
