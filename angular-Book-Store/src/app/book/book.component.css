@@ -1,0 +1,248 @@
+.grid-container {
+    display: grid;
+    margin: auto;
+    padding: 0;
+    width: 1000px;
+    height: 650px;
+    grid-template-columns: 1.5fr 1.5fr 0fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    gap: 10px 0px;
+    grid-template-areas: "book-image book-image . book-detail book-detail book-detail" "book-image book-image . book-cost book-cost book-cost" "book-image book-image . book-promotion book-promotion book-promotion" "book-button book-button . book-like book-like book-like";
+}
+
+.book-image {
+    grid-area: book-image;
+    /* background-color: red; */
+    width: 400px;
+    height: 100%;
+}
+
+.book-image img {
+    width: 90%;
+    height: 530px;
+}
+
+.book-detail {
+    grid-area: book-detail;
+    /* background-color: orange; */
+    margin: 0;
+    padding: 0;
+}
+
+.book-cost {
+    grid-area: book-cost;
+    /* background-color: yellow; */
+    height: 220px;
+    margin: 0;
+    padding: 0;
+}
+
+.book-promotion {
+    grid-area: book-promotion;
+    /* background-color: green; */
+}
+
+.book-like {
+    grid-area: book-like;
+    /* background-color: cyan; */
+}
+
+.book-button {
+    grid-area: book-button;
+    /* background-color: coral; */
+}
+
+.btn-vote-inactive {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.428571429;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 20px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    border: 2px solid #2F80ED;
+    transition: all 0.3s;
+}
+
+.btn-buy-now {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    user-select: none;
+    height: 44px;
+    margin-left: 10px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    -webkit-box-shadow: 0px 4px 6px hsl(0, 0%, 90%);
+    -webkit-border-radius: 22px;
+    display: -webkit-inline-flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%);
+    border: none;
+}
+
+.btn-cart-to-cart {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    cursor: pointer;
+    user-select: none;
+    height: 44px;
+    width: 220px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    -webkit-box-shadow: 0px 4px 6px hsl(0, 0%, 90%);
+    -webkit-border-radius: 22px;
+    display: -webkit-inline-flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    color: #F39801;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    border: 2px solid #F39801;
+}
+
+.discount-percent {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.428571429;
+    text-align: left;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    margin-left: 8px;
+    padding: 4px 10px;
+    -webkit-border-radius: 5px;
+    background-color: rgba(247, 148, 30, 0.1);
+    color: #F39801;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+#old-price {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.428571429;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    text-decoration: line-through;
+    padding-left: 5px;
+    font-size: 1em;
+    font-weight: 300;
+    margin-left: 8px;
+    color: #bfbfbf;
+}
+
+#product-price {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 25px;
+    font-size: 40px;
+    line-height: 32px;
+    color: #F39801;
+    font-family: 'Roboto',sans-serif !important;
+    font-weight: 700;
+}
+
+.link-wishlist-icon {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    line-height: 1.428571429;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'Roboto',sans-serif !important;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    text-decoration: none;
+    color: #646464;
+    width: 40px;
+    height: 40px;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px hsl(0, 0%, 90%);
+    -webkit-border-radius: 22px;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.minus-button {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #676767;
+    background-color: white;
+    border: 0.5px solid;
+}
+
+.add-button {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #676767;
+    background-color: white;
+    border: 0.5px solid;
+}
+
+.book-quantity {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    color: #676767;
+    background-color: white;
+    border: 0.5px solid;
+}
