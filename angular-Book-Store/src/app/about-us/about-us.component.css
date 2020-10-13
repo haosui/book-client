@@ -1,14 +1,11 @@
-/*
-	Book Store Sass Theme
-	Author: Vinay Reddy
-	version: 0.0.1
-*/
-/* BASE */
-/* Font family */
-/* color */
-/* Font size */
-/* mixin */
 
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    float: left;
+    width: 100%; }
   
   * {
     -webkit-box-sizing: border-box;
@@ -87,34 +84,50 @@
   /* modules */
   /* layouts */
   header .header-top {
-    background: #fcba68;
-    color: #fff;
-    padding: 7px 0 7px; }
+    background: #e7e7e7;;
+    color: #000;
+    padding: 7px 0 7px;
+    display: flex; }
+    header .header-top .left {
+      display: flex;
+    justify-content: space-between;    }
+    header .header-top .item {
+      display: flex;    }
     header .header-top .web-url {
-      font-size: 12px;
+      font-size: 14px;
       border-bottom: 1px solid;
-      color: #fff;
+      color: #000;
       line-height: 11px;
       display: inline-block;
-      font-style: italic; }
+      font-style: italic;
+       }
       header .header-top .web-url:hover {
         text-decoration: none;
         border: 0; }
     header .header-top h5 {
-      font-size: 16px;
-      font-weight: 300; }
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: 400; }
+      header .header-top .item i{
+        color:#ff9700;
+      }
     header .header-top .ph-number {
-      float: right; }
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: 400;
+    }
     header .header-top .row {
-      align-items: center; }
+      align-items: center;
+      justify-content: space-between; }
   header .main-menu {
-    padding: 40px 0; }
+    padding: 30px 0; }
     header .main-menu .navbar {
       padding: 0; }
     header .main-menu .navbar-brand {
       padding: 0;
       margin-top: -10px; }
     header .main-menu .navbar-light .navbar-nav .navbar-item {
+      margin: auto;
       padding: 0 15px;
       position: relative; }
       header .main-menu .navbar-light .navbar-nav .navbar-item:after {
@@ -142,6 +155,7 @@
         border: 0;
         font-size: 12px;
         height: 32px;
+        width: 220px;
         outline: 0; }
         header .main-menu .form-inline input:focus {
           outline: 0;
@@ -151,10 +165,10 @@
         font-size: 12px; }
   header .cart {
     padding: 0 10px;
-    margin-right: 10px;
+    margin-right: px;
     position: relative;
     margin-top: 2px !important; }
-    header .cart .quntity {
+    header .cart .quantity {
       font-size: 9px;
       position: absolute;
       top: -3px;
@@ -210,41 +224,10 @@
       margin: 0 5px; }
       .slider button.owl-dot.active {
         background: #ff9700; }
-    
-  .recomended-sec {    
-    margin-bottom: 80px; }   
-    .recomended-sec .main-sec {
-      
-      display: flex;
-      justify-content: space-between;
-      padding-top: 40px;
-    }
-    .recomended-sec .main-sec .categories {
-     
-      border-left: 2px solid #ff9700;
-    }
-    .recomended-sec .main-sec .categories .title {
-      color: #ffffff;
-      background: #ff9700;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .recomended-sec .main-sec .categories .list-cate h4{
-      font-size: 17px;
-      padding-top: 22px;
-      border-width: 400px;
-      border-bottom: 1px solid #e7e7e7;
-      text-align: center;
-    }
-    .recomended-sec .main-sec .categories .list-cate h4:hover{
-      color: #ff9700;
-    }
-    .recomended-sec .main-sec .slide-top {
-      margin-left: 20px;
-      display: flex;
-      justify-content: space-between;
-    }
-
+  
+  .recomended-sec {
+    text-align: center;
+    margin-bottom: 80px; }
     .recomended-sec h2 {
       display: inline-block;
       font-size: 30px;
@@ -256,12 +239,11 @@
       color: #363636; }
     .recomended-sec hr {
       margin: 0;
-      margin-top: -22px; }
-    .recomended-sec .title-new {
-      text-align: center;
-      margin-bottom: 30px; }
+      margin-top: -20px;
+      border-top: 1px solid #999999; }
+    .recomended-sec .title {
+      margin-bottom: 70px; }
     .recomended-sec .item {
-      text-align: center;
       border: 1px solid #d5d5d5;
       padding: 36px 10px;
       cursor: pointer;
@@ -326,7 +308,9 @@
         left: 0;
         text-transform: uppercase;
         color: #fff; }
-  
+        .recomended-sec-1 .item {
+          border: 0;
+        }
   .about-sec {
     margin-bottom: 80px;
     background: #f7f4f0;
@@ -548,12 +532,11 @@
   
   @media only screen and (max-width: 1024px) {
     header .cart .quntity {
-      font-size: 10px;
-      color: tomato;}
+      font-size: 10px; }
   
     .container {
       width: 100%;
-      padding: 0 20px;
+      padding:  20px;
       max-width: 100%; }
   
     .recent-book-sec .row {
@@ -583,17 +566,17 @@
       line-height: 46px; } }
   @media only screen and (max-width: 800px) {
     header .header-top h5 {
-      font-size: 12px; }
+      font-size: 24px; }
   
     header .header-top .ph-number {
-      font-size: 12px; }
+      font-size: 24px; }
   
     header .main-menu {
       padding: 20px 0; }
   
     header .main-menu .navbar-light .navbar-nav .navbar-item {
-      padding: 0;
-      margin-bottom: 10px; }
+      padding: 10;
+      margin-bottom: 20px; }
   
     header .main-menu .navbar-light .navbar-nav .navbar-item:after {
       display: none; }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="breadcrumb">
+        <div class="container">
+            <a class="breadcrumb-item" href="index.html">Home</a>
+            <span class="breadcrumb-item active">Shop</span>
+        </div>
+    </div>
+    <section class="static about-sec">
+        <div class="container">
+            
+            <h2>Sách tiếng anh</h2>
+            <div class="recomended-sec recomended-sec-1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" *ngFor="let item of ebooks">
+                        <div class="item">
+                            <img width="160" height="250" src={{item.PathImage}} alt="img">
+                            <h3>{{item.Title}}</h3>
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="#">Buy Now</a></h6>
+                            <a class="hover" href="product-single.html">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h2>Truyện Thiếu Nhi</h2>
+            <div class="recomended-sec recomended-sec-1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" *ngFor="let item of cbooks">
+                        <div class="item">
+                            <img width="160" height="250" src={{item.PathImage}} alt="img">
+                            <h3>{{item.Title}}</h3>
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="#">Buy Now</a></h6>
+                            <a class="hover" href="product-single.html">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h2>Tiểu thuyết hay nhất</h2>
+            <div class="recent-book-sec">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-4" *ngFor="let item of novbooks">
+                        <div class="item">
+                            <img width="160" height="250" src={{item.PathImage}} alt="img">
+                            <h3>{{item.Title}}</h3>
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="#">Buy Now</a></h6>
+                            <a class="hover" href="product-single.html">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h2>Sách được đánh giá cao</h2>
+            <div class="recent-book-sec">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-4" *ngFor='let item of hbooks'>
+                        <div class="item">
+                            <img width="160" height="250" src={{item.PathImage}} alt="img">
+                            <h3><a href="#">{{item.Title}}</a></h3>
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="product-single.html">Buy Now</a></h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="btn-sec">
+                    <button class="btn gray-btn">load More books</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

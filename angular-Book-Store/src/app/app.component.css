@@ -88,9 +88,6 @@ body {
     color: #000;
     padding: 7px 0 7px;
     display: flex; }
-    header .header-top .left {
-      display: flex;
-    justify-content: space-between;    }
     header .header-top .item {
       display: flex;    }
     header .header-top .web-url {
