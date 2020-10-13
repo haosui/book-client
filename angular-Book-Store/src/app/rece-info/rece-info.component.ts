@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class ReceInfoComponent implements OnInit {
   registerForm: FormGroup;
   formdisplayy:boolean = false;
+  
   infodisplay:boolean = !this.formdisplayy;
   submitted = false;
   thongtin = {
@@ -143,7 +144,11 @@ loadInfo()
  }
 onCance() {
     this.submitted = false;
-    this.registerForm.reset();
+    this.router.navigate(['/checkout']);
+}
+xoaform()
+{
+  this.registerForm.reset();
 }
 onEditt()
 {

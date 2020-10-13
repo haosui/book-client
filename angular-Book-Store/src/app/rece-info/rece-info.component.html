@@ -1,95 +1,146 @@
-<div class="card m-3">
-    <div>
-        <h5 class="card-header">Angular 8 Reactive Form Validation</h5>
-         <button (click) = "onEditt()"> {{strinbuton}}</button>
-    </div>
-    <div class="card-body" *ngIf="formdisplayy">
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >          
-                <div class="form-group">
-                    <label>Họ và Tên</label>
-                    <input type="text" formControlName="hoten"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.hoten.errors }" />
-                    <div *ngIf="submitted && f.hoten.errors" class="invalid-feedback">
-                        <div *ngIf="f.hoten.errors.required">Nhập họ tên</div>
-                    </div>                    
-                </div>
-                <div class="form-group">
-                    <label>Điện thoại</label>
-                    <input type="text" formControlName="dienthoai" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dienthoai.errors }" />
-                    <div *ngIf="submitted && f.dienthoai.errors" class="invalid-feedback">
-                        <div *ngIf="f.dienthoai.errors.required">Nhập số điện thoại</div>
-                        <div *ngIf="f.dienthoai.errors.pattern">Số điện thoại sai</div>
-                        <div *ngIf="f.dienthoai.errors.minlength">Số điện thoại ngắn</div>
-                    </div>                    
-                </div>
-
-                <div class="form-group">
-                    <label>tinh</label>
-                    <select formControlName="tinh" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tinh.errors }" (blur)="onBlurtinh(this)">
-                        <option *ngFor="let order of tinh; let i = index" [value]="tinh[i].id">
-                            {{tinh[i].name}}
-                          </option>
-                    </select>
-
-                    
-                    <div *ngIf="submitted && f.tinh.errors" class="invalid-feedback">
-                        <div *ngIf="f.tinh.errors.required">tinh is required</div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label>huyen</label>
-                    <select formControlName="huyen" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.huyen.errors }" (blur)="onBlurhuyen(this)">
-                        <option *ngFor="let order of huyen; let i = index" [value]="huyen[i].id">
-                            {{huyen[i].name}}
-                          </option>
-                    </select>
-
-                    
-                    <div *ngIf="submitted && f.huyen.errors" class="invalid-feedback">
-                        <div *ngIf="f.huyen.errors.required">huyen is required</div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>xa</label>
-                    <select formControlName="xa" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.xa.errors }">
-                        <option *ngFor="let order of xa; let i = index" [value]="xa[i].id">
-                            {{xa[i].name}}
-                          </option>
-                    </select>
-
-                    
-                    <div *ngIf="submitted && f.xa.errors" class="invalid-feedback">
-                        <div *ngIf="f.xa.errors.required">xa is required</div>
-                    </div>
-                </div>
-
-           
-            
-   
-
-            <div class="form-group form-check">
-                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
-                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
-                <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
-            </div>
-            
 
 
-
-              
-        </form>
-        
+<div  id= "abc"style="margin-bottom: 0px;">
     
-    </div>
-    <div *ngIf= '!formdisplayy'>
-         <div >
-         <p> {{thongtin.ten}}</p>
-         <p>{{thongtin.sdt}} </p>
-         <p>{{thongtin.diachi}}</p>
-        </div>
-    </div>
-    <div class="text-center">
-        <button class="btn btn-primary mr-1" (click)="onSubmit()">Continue</button>
-        <button class="btn btn-secondary" type="reset" (click)="onCance()">Back</button>
-    </div>
+    <section id="ves-wrapper">
+        <section id="page" class="offcanvas-pusher" role="main">
+
+            <div class="wrapper" id="wrapper">
+                <div id="loading"></div>
+                <div class="page">
+                    
+                    <div class="main-container col1-layout no-margin-top">
+                        <div class="main">
+                            <div class="margin-bottom: 5px;">
+                            </div>
+                            <div class="col-main">
+                                <div class="container">
+                                    <div class="container-inner">
+                                        <div style="background-color: white; margin-left: 30px;">
+                                            <div>
+                                                <h5 class="card-header">Thông tin người nhận </h5>
+                                                 <button class="button4" (click) = "onEditt()"> {{strinbuton}}</button>
+                                                 <button class="button4"  *ngIf="formdisplayy" (click)="xoaform()">Xóa</button>
+                                            </div>
+                                            <div class="my-account" *ngIf="formdisplayy">
+                                                <style>
+                                                    
+                                                    .my-account{
+                                                    padding-right: 15px;
+                                                    padding-left: 15px;
+                                                    margin-top: 0 !important;
+                                                    }
+                                                </style>
+                                                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >          
+                                                        <div class="form-group">
+                                                            <label>Họ và Tên</label>
+                                                            <input type="text" formControlName="hoten"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.hoten.errors }" />
+                                                            <div *ngIf="submitted && f.hoten.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.hoten.errors.required">Nhập họ tên</div>
+                                                            </div>                    
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Điện thoại</label>
+                                                            <input type="text" formControlName="dienthoai" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dienthoai.errors }" />
+                                                            <div *ngIf="submitted && f.dienthoai.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.dienthoai.errors.required">Nhập số điện thoại</div>
+                                                                <div *ngIf="f.dienthoai.errors.pattern">Số điện thoại sai</div>
+                                                                <div *ngIf="f.dienthoai.errors.minlength">Số điện thoại ngắn</div>
+                                                            </div>                    
+                                                        </div>
+                                        
+                                                        <div class="form-group">
+                                                            <label>tinh</label>
+                                                            <select formControlName="tinh" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tinh.errors }" (blur)="onBlurtinh(this)">
+                                                                <option *ngFor="let order of tinh; let i = index" [value]="tinh[i].id">
+                                                                    {{tinh[i].name}}
+                                                                  </option>
+                                                            </select>
+                                        
+                                                            
+                                                            <div *ngIf="submitted && f.tinh.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.tinh.errors.required">tinh is required</div>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <div class="form-group">
+                                                            <label>huyen</label>
+                                                            <select formControlName="huyen" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.huyen.errors }" (blur)="onBlurhuyen(this)">
+                                                                <option *ngFor="let order of huyen; let i = index" [value]="huyen[i].id">
+                                                                    {{huyen[i].name}}
+                                                                  </option>
+                                                            </select>
+                                        
+                                                            
+                                                            <div *ngIf="submitted && f.huyen.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.huyen.errors.required">huyen is required</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>xa</label>
+                                                            <select formControlName="xa" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.xa.errors }">
+                                                                <option *ngFor="let order of xa; let i = index" [value]="xa[i].id">
+                                                                    {{xa[i].name}}
+                                                                  </option>
+                                                            </select>
+                                        
+                                                            
+                                                            <div *ngIf="submitted && f.xa.errors" class="invalid-feedback">
+                                                                <div *ngIf="f.xa.errors.required">xa is required</div>
+                                                            </div>
+                                                        </div>
+                                        
+                                                   
+                                                    
+                                           
+                                        
+                                                    <div class="form-group form-check">
+                                                        <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                                                        <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                                                        <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                                                    </div>
+                                                    
+                                        
+                                        
+                                        
+                                                      
+                                                </form>
+                                                
+                                            
+                                            </div>
+                                            <div class="css2" *ngIf= '!formdisplayy'>
+                                                <style>
+                                                    .css2{
+                                                    padding-right: 15px;
+                                                    padding-left: 15px;
+                                                    margin-top: 0 !important;
+                                                    }
+                                                </style>
+                                                 <div >
+                                                 <p> Người nhận       :       {{thongtin.ten}}</p>
+                                                 <p> Số điện thoại    :    {{thongtin.sdt}} </p>
+                                                 <p> Địa chỉ          :          {{thongtin.diachi}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-center">
+                                                <button class="popup-fahasa-default-alert-confirm" (click)="onSubmit()"> Thanh toán</button>
+                                                <button class="popup-fahasa-default-alert-cancel" (click)="onCance()">Trở lại</button>
+                                            </div>
+                                        </div>
+                                          
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+   
 </div>
