@@ -2,6 +2,8 @@ import { Component, OnInit , Output, EventEmitter, Inject, Injectable} from '@an
 import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookList, NovelBookList } from '../book/Book-Mock';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { CartBook } from 'src/app/cart/cartBook';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book',
@@ -17,12 +19,72 @@ export class BookComponent implements OnInit {
   ebooks = EnglishBookList;
   novbooks = NovelBookList;
   bookQuantity = 1;
+  
+ cbook: any;
+ book = {
+  Id: 0,
+PathImage: "",
+Price: 0,
+Title: "",
+AuthorName: "",
+Description: "",
+numberOrder: 0,
+PriceBeforsale: 0,
+PriceAfterSale: 0
 
-  constructor() {
+ };
+  constructor( private router: Router) {
+    this.bookQuantity = 0;
   }
 
   ngOnInit(): void {
+    let Ob: Array<CartBook> = JSON.parse(localStorage.getItem('da'));
+   
+    this.cbook = Ob;
+    this.getBook();
   }
+  add()
+  {
+    this.bookQuantity += 1;
+    console.log(this.bookQuantity);
+  }
+  minus()
+  {
+    if(this.bookQuantity >= 1)
+   { this.bookQuantity-=1;}
+  }
+  getBook()
+  {
+    this.book  = JSON.parse(localStorage.getItem('bookselect'));
+    console.log(this.book);
+  }
+  addtocart()
+  {
+    var flag = true;
+    for (let i = 0; i < this.cbook.length; i++) {
+      if (this.book.Id=== this.cbook[i].Id) {
+       this.cbook[i].numberOrder +=this.bookQuantity;
+       flag = false;
+      }
+    }
+    if(flag)
+    {
+      var cartbook: CartBook ={
+          Id: 0,
+          Title: this.book.Title,
+          Price: this.book.Price,
+          PathImage: this.book.PathImage,
+          numberOrder: this.bookQuantity
+      };
+      this.cbook.push( cartbook);
+    }
+    localStorage.setItem('da', JSON.stringify(this.cbook));
+   
+  }
+  muangay()
+  {
+       this.router.navigate(['/cart']);
 
+  }
 
 }

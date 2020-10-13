@@ -15,11 +15,11 @@
             <div class="recomended-sec recomended-sec-1">
                 <div class="row">
                     <div class="col-lg-3 col-md-6" *ngFor="let item of ebooks">
-                        <div class="item">
+                        <div class="item"  (click)= "getbook(item)">
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3>{{item.Title}}</h3>
-                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="#">Buy Now</a></h6>
-                            <a class="hover" href="product-single.html">
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
+                            <a class="hover" href="http://localhost:4200/book">
                             </a>
                         </div>
                     </div>
@@ -30,11 +30,11 @@
             <div class="recomended-sec recomended-sec-1">
                 <div class="row">
                     <div class="col-lg-3 col-md-6" *ngFor="let item of cbooks">
-                        <div class="item">
+                        <div class="item"  (click)= "getbook(item)">
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3>{{item.Title}}</h3>
-                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="#">Buy Now</a></h6>
-                            <a class="hover" href="product-single.html">
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
+                            <a class="hover" href="http://localhost:4200/book">
                             </a>
                         </div>
                     </div>
@@ -45,11 +45,11 @@
             <div class="recent-book-sec">
                 <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4" *ngFor="let item of novbooks">
-                        <div class="item">
+                        <div class="item"  (click)= "getbook(item)" >
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3>{{item.Title}}</h3>
-                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="#">Buy Now</a></h6>
-                            <a class="hover" href="product-single.html">
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
+                            <a class="hover" href="http://localhost:4200/book">
                             </a>
                         </div>
                     </div>
@@ -60,10 +60,10 @@
             <div class="recent-book-sec">
                 <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4" *ngFor='let item of hbooks'>
-                        <div class="item">
+                        <div class="item"  (click)= "getbook(item)">
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3><a href="#">{{item.Title}}</a></h3>
-                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="product-single.html">Buy Now</a></h6>
+                            <h6><span class="price">${{item.PriceAfterSale}}</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
                         </div>
                     </div>
 
