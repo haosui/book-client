@@ -6,6 +6,13 @@ import { BookComponent } from './book/book.component';
 import { HomeComponent } from './home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { CartComponent } from './cart/cart.component';
+import { ReceInfoComponent } from './rece-info/rece-info.component';
+import { BookDetailComponent } from './book/book-detail/book-detail.component';
+
 import { NzRateModule } from 'ng-zorro-antd/rate';
 
 
@@ -31,12 +38,18 @@ registerLocaleData(en);
     HomeComponent,
     CartComponent,
     CheckoutComponent,
+
+    ReceInfoComponent,
+    BookDetailComponent
+
     ShopComponent,
     AboutUsComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
+    FormsModule,
     CarouselModule,
     BrowserAnimationsModule,
     FormsModule,
