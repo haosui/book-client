@@ -10,21 +10,21 @@
 
 <div class="grid-container">
         <div class="book-image">
-            <img src="{{nbooks[0].PathImage}}" alt="">
+            <img src="{{book.PathImage}}" alt="">
         </div>
         <div class="book-detail">
-                <span style="font-size: 40px"><b>{{nbooks[0].Title}}</b></span>
+                <span style="font-size: 40px"><b>{{book.Title}}</b></span>
                 <br><span>Nhà cung cấp: <a href="#">Vinabooks</a></span>
-                <br><span>Tác giả: <b>{{nbooks[0].AuthorName}}</b></span>
+                <br><span>Tác giả: <b>{{book.AuthorName}}</b></span>
                 <br><span>Nhà xuất bản: <b>NXB Kim Đồng</b></span>
                 <br><span>Hình thức bìa: <b>Bìa Mềm</b></span>
-                <br>Đánh giá: <nz-rate [ngModel]="4"></nz-rate><span>&nbsp;(6 đánh giá)</span>
+                <br>Đánh giá: <span>&nbsp;(6 đánh giá)</span>
         </div>
         <div class="book-cost">
             <p><span><span class="price" id="product-price">
-        {{nbooks[0].PriceAfterSale}}&nbsp;đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        {{book.PriceAfterSale}}&nbsp;đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
         <span class="price" id="old-price">
-            {{nbooks[0].PriceBeforsale}}&nbsp;đ</span>
+            {{book.PriceBeforsale}}&nbsp;đ</span>
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="discount-percent">-21%
             </span>
         </span>
@@ -41,9 +41,9 @@
     </p>
             <div>
                 <span style="font-size: 18px"><b>Số lượng: </b></span>
-                <input type="button" class="minus-button" name="-" value=" - ">
-                <input type="text" class="book-quantity" name="quantity" value="1">
-                <input type="button" class="add-button" name="+" value=" + ">
+                <button class="minus-button" name="-"  (click) ="minus()"> - </button>
+                <input type="text" class="book-quantity" name="quantity" [value]="bookQuantity">
+                <button  class="add-button" name="+" (click)="add()" >  + </button>
             </div>
 
         </div>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="book-button">
-            <button type="button" title="Thêm vào giỏ hàng" class="btn-cart-to-cart"><div class="shopping-cart-icon"></div><span>Thêm vào giỏ hàng</span></button>
-            <button type="button" title="Mua ngay" is_buynow="true" class="btn-buy-now "><span>Mua ngay</span></button>
+            <button type="button" title="Thêm vào giỏ hàng" class="btn-cart-to-cart" (click)="addtocart()"><div class="shopping-cart-icon"></div><span>Thêm vào giỏ hàng</span></button>
+            <button type="button" title="Mua ngay" is_buynow="true" class="btn-buy-now " (click)="muangay()"><span>Mua ngay</span></button>
         </div>
     
