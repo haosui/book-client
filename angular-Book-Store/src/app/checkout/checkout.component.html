@@ -16,7 +16,63 @@
                                 <div class="container">
                                     <div class="container-inner">
                                         <br>
-    
+                                        <div id="fhs_checkout_block_paymentmethod" class="fhs_checkout_block">
+                                            <div class="fhs_checkout_block_title">Thông tin người nhận</div>
+                                            <div class="fhs_checkout_block_content">
+                                                <div class="fhs_checkout_block_radio_list">
+                                                    <div>
+                                                        <ul id="fhs_checkout_paymentmethod"
+                                                            class="fhs_checkout_block_radio_list_items">
+                                                            <li class="fhs_checkout_block_radio_list_item" 
+                                                            *ngFor="let info of thongtinnhan"  >
+                                                                
+                                                                <div>
+                                                                    <div
+                                                                        class="fhs_checkout_paymentmethod_with_tutorial">
+                                                                        <label class="fhs-radio-big"> {{info.ten}},{{info.sdt}},{{info.diachi}} <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_banktransfer"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="banktransfer">
+                                                                            <span class="radiomark-big" (click)="selectt(info)"></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="fhs_checkout_block_radio_list_item" (click)="creat()" 
+                                                             >
+                                                                
+                                                                <div>
+                                                                    <div
+                                                                        class="fhs_checkout_paymentmethod_with_tutorial">
+                                                                        <label class="fhs-radio-big">Giao hàng đến địa chỉ khác  <input type="radio"
+                                                                                id="fhs_checkout_paymentmethod_banktransfer"
+                                                                                name="fhs_checkout_paymentmethod_option"
+                                                                                class="fhs_checkout_paymentmethod_option"
+                                                                                value="banktransfer">
+                                                                            <span class="radiomark-big" ></span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            
+                                                        </ul>
+
+                                                    </div>
+                                                </div>
+                                                <div class="fhs_checkout_block_loading">
+                                                    <div>
+                                                        <div id="default-icon-loading"
+                                                            style="height: 40px; width: 40px; background: url('https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fpointstore/loading.png') no-repeat center center transparent; background-size: 40px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fhs_checkout_block_alert"></div>
+                                        </div>
+
+
+
                                         <!-- Shipping Method start -->
                                         <div id="fhs_checkout_block_shippingmethod" class="fhs_checkout_block">
                                             <div class="fhs_checkout_block_title">Phương thức vận chuyển</div>

@@ -34,7 +34,7 @@ PriceAfterSale: 0
 
  };
   constructor( private router: Router) {
-    this.bookQuantity = 0;
+    this.bookQuantity = 1;
   }
 
   ngOnInit(): void {
@@ -70,15 +70,16 @@ PriceAfterSale: 0
     if(flag)
     {
       var cartbook: CartBook ={
-          Id: 0,
+          Id: this.book.Id,
           Title: this.book.Title,
-          Price: this.book.Price,
+          Price: this.book.PriceAfterSale,
           PathImage: this.book.PathImage,
           numberOrder: this.bookQuantity
       };
       this.cbook.push( cartbook);
     }
     localStorage.setItem('da', JSON.stringify(this.cbook));
+    
    
   }
   muangay()

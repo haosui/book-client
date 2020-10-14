@@ -16,11 +16,11 @@ import { BookDetailComponent } from './book/book-detail/book-detail.component';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 
 
-import { CartComponent } from './cart/cart.component';
+
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ShopComponent } from './shop/shop.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { FormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
@@ -40,7 +40,7 @@ registerLocaleData(en);
     CheckoutComponent,
 
     ReceInfoComponent,
-    BookDetailComponent
+    BookDetailComponent,
 
     ShopComponent,
     AboutUsComponent,
