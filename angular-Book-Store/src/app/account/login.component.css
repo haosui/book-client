@@ -1,0 +1,79 @@
+.login-form-margin {
+    margin-bottom: 16px;
+  }
+  .login-form-forgot {
+    float: left;
+  }
+  .login-form-button {
+    width: 100%;
+  }
+.title-w {
+  font-size: 18px;
+  color: #fefefe;
+  margin: 0;
+}
+.form-title{
+  margin: 30px;
+  font-size: 20px;
+  padding-bottom: 0;
+  line-height: 22px;
+  position: relative;
+  border-bottom: 1px dashed #c7c7c7;
+  clear: both;
+  color:#fcba68;
+}
+.container{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+    border: 1px solid#fcba68;
+    border-radius: 10px;
+    padding: 0px;
+    border-radius: 30px;
+
+}
+.login-form{
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 15px;
+}
+.social-login-box {
+  width: 100%;
+  background-color:#E8E8E8;
+  position: relative;
+  height: 100px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  text-align: center;
+}
+.title-footer {
+  font-size: 12px;
+  font-family:  "Montserrat-Light",sans-serif !important;
+  color: #474747;
+  line-height: 1.5;
+  margin-top: 5px;
+  float: left;
+  margin-left: 83px;
+}
+
+.social-login-icons {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+a {
+  display: inline-block;
+  margin: 15px 5px 15px 0;
+}
+img {
+  width: auto !important;
+  height: 40px;
+}
+.p-field {
+   margin:auto;
+   margin-right: 0px;
+   margin-top: 0px;
+}

@@ -1,0 +1,117 @@
+<form [formGroup]="form" class="login-form" (ngSubmit)="onSubmit()">
+    <h1 class="form-title"> <span> <i class="pi pi-user">
+    </i> &nbsp;THÔNG TIN CÁ NHÂN</span> </h1>
+      <div class="p-grid p-fluid">
+        <div class="p-col-12 p-md-12">
+            <label>Tên*</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText placeholder="First name" formControlName="firstName"
+                    [ngClass] = "{'is-invalid': submitted && f.firstName.errors}">      
+            </div>
+            <div *ngIf="submitted && f.firstName.errors" class="p-invalid">
+              <small *ngIf="f.firstName.errors.required">Vui lòng nhập tên người dùng !</small>
+            </div>
+            <div *ngIf="!(submitted && f.firstName.errors)" class="p-invalid">
+              <small>&nbsp;</small>
+            </div>
+        </div>
+        <div class="p-col-12 p-md-12">
+            <label>Họ*</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+              <input type="text" pInputText placeholder="Last name" formControlName="lastName"
+                    [ngClass] = "{'is-invalid': submitted && f.lastName.errors}">      
+            </div>
+            <div *ngIf="submitted && f.lastName.errors" class="p-invalid">
+              <small *ngIf="f.lastName.errors.required">Vui lòng nhập tên người dùng !</small>
+            </div>
+            <div *ngIf="!(submitted && f.lastName.errors)" class="p-invalid">
+              <small>&nbsp;</small>
+            </div>
+        </div>
+          <div class="p-col-12 p-md-12">
+              <label>Tên đăng nhập*</label>
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                <input type="text" pInputText placeholder="Username" formControlName="username"
+                      [ngClass] = "{'is-invalid': submitted && f.username.errors}">      
+              </div>
+              <div *ngIf="submitted && f.username.errors" class="p-invalid">
+                <small *ngIf="f.username.errors.required">Vui lòng nhập tên người dùng !</small>
+              </div>
+              <div *ngIf="!(submitted && f.username.errors)" class="p-invalid">
+                <small>&nbsp;</small>
+              </div>
+          </div>
+        <div class="p-col-12 p-md-12" style="width:50%">
+            <label>Ngày sinh*</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+              
+              <input type="Date" pInputText placeholder="dob" formControlName="dob"
+                      [ngClass] = "{'is-invalid': submitted && f.dob.errors}"> 
+            </div>
+            <div *ngIf="submitted && f.dob.errors" class="p-invalid">
+                <small *ngIf="f.dob.errors.required">Vui lòng nhập ngày sinh !</small>
+            </div>
+            <div *ngIf="!(submitted && f.dob.errors)" class="p-invalid">
+              <small>&nbsp;</small>
+            </div>
+        </div>
+        <div class="p-col-12 p-md-12">
+            <label>Số điện thoại*</label>
+            <div class="p-inputgroup">
+              <span class="p-inputgroup-addon"><i class="pi pi-mobile"></i></span>
+              <input type="text" pInputText placeholder="PhoneNumber"  formControlName="phone"
+                    [ngClass] = "{'is-invalid': submitted && f.phone.errors}">    
+            </div>
+            <div *ngIf="submitted && f.phone.errors" class="p-invalid">
+                <small *ngIf="f.phone.errors.required">Vui lòng nhập số điện thoại !</small>
+                <small *ngIf="f.phone.errors.maxlength">SĐT có tối đa 15 kí tự !</small>
+                <small *ngIf="f.phone.errors.pattern" >SĐT không hợp lệ !</small>
+              </div>
+
+              <div *ngIf="!(submitted && f.phone.errors)" class="p-invalid">
+                <small>&nbsp;</small>
+              </div>
+        </div>
+        <div class="p-col-12 p-md-12">
+            <label>Giới tính*</label>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-users"></i></span>
+                <p-dropdown [options]="genders"  placeholder="Select gender" optionLabel="name" [showClear]="false"
+                formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
+                ></p-dropdown>
+            </div>
+            <div *ngIf="submitted && f.gender.errors" class="p-invalid">
+                <small *ngIf="f.gender.errors.required">Vui lòng chọn giới tính !</small>
+            </div>
+            <div *ngIf="!(submitted && f.gender.errors)" class="p-invalid">
+              <small>&nbsp;</small>
+            </div>
+        </div>
+        <div class="p-col-12 p-md-12">
+            <label>Mật khẩu*</label>
+              <div class="p-inputgroup">
+                <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                <input pPassword type="password" placeholder="Password" formControlName="password"
+                [ngClass] = "{'is-invalid': submitted && f.password.errors}" 
+                />
+              </div>
+              <div *ngIf="submitted && f.password.errors" class="p-invalid">
+                <small *ngIf="f.password.errors.required">Vui lòng nhập mật khẩu !</small>
+                <small *ngIf="f.password.errors.minlength">Mật khẩu có ít nhất 6 kí tự !</small>
+              </div>
+              <div *ngIf="!(submitted && f.password.errors)" class="p-invalid">
+                <small>&nbsp;</small>
+              </div>
+        </div>
+            <div class="p-col-12 p-md-12">
+              <button pButton pRipple type="submit" label="Lưu thông tin" style="background-image: linear-gradient( to right, rgba(255, 152, 0, 1),
+              rgba(247, 105, 93, 1) ); border-radius: 30px;"></button>
+            </div>
+      </div>
+  </form>
+  
+  
