@@ -246,7 +246,14 @@ body {
       border: 1px solid #d5d5d5;
       padding: 36px 10px;
       cursor: pointer;
-      position: relative; }
+      position: relative;
+      color: #ff0000; }
+      .recomended-sec .price {
+        font-size: 16px; }
+      .recomended-sec .price-before {
+        margin-left: 6px;
+      text-decoration-line: line-through;
+      color: #000000 }
       .recomended-sec .item img {
         margin-bottom: 15px;
         max-width: 100%; }
@@ -260,8 +267,6 @@ body {
         text-overflow: ellipsis; }
       .recomended-sec .item h6 {
         font-size: 12px; }
-        .recomended-sec .item h6 span {
-          color: #ff0000; }
         .recomended-sec .item h6 a {
           color: #000;
           border-bottom: 1px solid #d5d5d5;
@@ -373,6 +378,13 @@ body {
         margin-bottom: 15px;
         max-width: 100%;
         cursor: pointer; }
+        .recent-book-sec .price {
+        font-size: 16px;
+        color: #ff0000; }
+      .recent-book-sec .price-before {
+        margin-left: 6px;
+        text-decoration-line: line-through;
+        color: #000000 }
       .recent-book-sec .item img:hover + h3 {
         text-decoration: underline; }
       .recent-book-sec .item h3 {
@@ -384,8 +396,6 @@ body {
           color: inherit; }
       .recent-book-sec .item h6 {
         font-size: 12px; }
-        .recent-book-sec .item h6 span {
-          color: #ff0000; }
         .recent-book-sec .item h6 a {
           color: #000;
           border-bottom: 1px solid #d5d5d5;

@@ -4,7 +4,7 @@
 <body>
 
     <section class="slider">
-        <div class="container"  style="width:80%">
+        <div class="container">
             <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide>
                     <div class="item">
@@ -14,7 +14,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                 <div class="title">
                                     <h3>welcome to bookstore</h3>
                                     <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <a [routerLink]="['/shop']" class="btn">shop books</a>
                                 </div>
                             </div>
                         </div>
@@ -165,23 +165,6 @@
             </div>
         </div>
     </section>
-    <section class="about-sec">
-        <div class="about-img">
-            <figure style="background:url(../assets/images/about-img.jpg)no-repeat;"></figure>
-        </div>
-        <div class="about-content">
-            <h2>About bookstore,</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. Lorem
-                Ipsum has been the book. </p>
-            <p>It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's printer took a galley of type and</p>
-            <div class="btn-sec">
-                <a href="shop.html" class="btn yellow">shop books</a>
-                <a href="login.html" class="btn black">subscriptions</a>
-            </div>
-        </div>
-    </section>
     <section class="recent-book-sec">
         <div class="container">
             <div class="title">
@@ -203,6 +186,20 @@
             </div>
         </div>
     </section>
+    <section class="about-sec">
+        <div class="about-img">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0XWs-OzlebU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="about-content">
+            <p>Dù xã hội có phát triển đến đâu, các phương thức lưu giữ thông tin khác có thể phát triển nhưng việc lưu giữ sách và hiểu được tầm quan trọng của sách sẽ giúp cho xã hội ngày càng văn minh, tiến bộ hơn. Đọc sách có chọn lọc và hiểu hết các giá trị trong cuốn sách đó sẽ giúp người đọc ngày càng phát triển được bản thân. 
+            Chính vì vậy, người trẻ mỗi ngày hãy cố gắng rèn luyện, giải trí bằng việc đọc sách để cuộc sống trở nên thú vị hơn.</p>
+            <div class="btn-sec">
+                <a [routerLink]="['/shop']" class="btn yellow">shop books</a>
+                <a href="login.html" class="btn black">subscriptions</a>
+            </div>
+        </div>
+    </section>
+    
     <section class="features-sec">
         <div class="container">
             <ul>

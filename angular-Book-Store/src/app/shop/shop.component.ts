@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookList, NovelBookList } from '../book/Book-Mock';
+import { HighBookList, ChildrentBookList, EnglishBookList, NovelBookList, SkillBookList} from '../book/Book-Mock';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -7,11 +7,10 @@ import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookLi
 })
 export class ShopComponent implements OnInit {
   hbooks = HighBookList;
-  nbooks = NewBookList;
-  rbooks = ReBookList;
   cbooks = ChildrentBookList;
   ebooks = EnglishBookList;
   novbooks = NovelBookList;
+  skbooks = SkillBookList;
   constructor() { }
 
   ngOnInit(): void {

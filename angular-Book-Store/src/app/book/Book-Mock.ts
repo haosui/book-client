@@ -34,16 +34,10 @@ export const HighBookList: Book[] = [
     {Id: 10, Title: 'Gintama', AuthorName: 'ai bit', Description: 'hay vlin ra', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/gin.jpg'},
 ];
 
-export const ReBookList: Book[] = [
-    {Id: 1, Title: 'Star wars', AuthorName: 'Hai', Description: 'hay vlin ra', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/Star-wars.jpg'},
-    {Id: 2, Title: 'The Code', AuthorName: 'Tu Anh', Description: 'hay vlin ra', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/thecode.jpg'},
-    {Id: 3, Title: 'the fall of berlin wall', AuthorName: 'Dung', Description: 'hay vlin ra', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/thefall.jpg'},
-    {Id: 4, Title: 'Mama', AuthorName: 'Tuan Anh', Description: 'hay vlin ra', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/mama.jpg'},
-];
 export const ChildrentBookList: Book[] = [
     {Id: 1, Title: 'Ai từng là con nít', AuthorName: 'Nhiều tác giả', Description: 'Truyện thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c1.jpg'},
     {Id: 2, Title: 'Chú chó trung thành', AuthorName: 'Luis Sepulveda', Description: 'Truyện thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c2.jpg'},
-    {Id: 3, Title: 'Cậu bé mang pyjama sọc', AuthorName: 'John Boyne', Description: 'Sách thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c3.jpg'},
+    {Id: 3, Title: 'Ơn trời', AuthorName: 'John Boyne', Description: 'Sách thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c9.jpg'},
     {Id: 4, Title: 'Ngày xưa thật thú vị', AuthorName: 'Dịch: Thanh Uyên', Description: 'Truyện thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c4.jpg'},
     {Id: 5, Title: 'The Big Bed', AuthorName: 'Tom Knight', Description: 'Truyện thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c5.jpg'},
     {Id: 6, Title: 'Cara de otro', AuthorName: 'Pedro Riera', Description: 'Truyện thiếu nhi', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/c6.jpg'},
@@ -61,14 +55,20 @@ export const EnglishBookList: Book[] = [
     {Id: 8, Title: 'English in use', AuthorName: 'Petit Bateau', Description: 'Tiếng anh', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/english8.jpg'},
 ];
 export const NovelBookList: Book[] = [
-    {Id: 1, Title: 'Làm bạn với bầu trời', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel1.jpg'},
-    {Id: 2, Title: 'Bong bóng lên trời', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel2.jpg'},
-    {Id: 3, Title: 'Ngồi khóc trên cây', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel3.jpg'},
-    {Id: 4, Title: 'Chúc ngày tốt lành', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel4.jpg'},
-    {Id: 5, Title: 'Độc thân không cô đơn', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel6.jpg'},
-    {Id: 6, Title: 'Thanh xuân để dành', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel7.jpg'},
-    {Id: 7, Title: 'Bồ công anh bất tử', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel8.jpg'},
-    {Id: 8, Title: 'Ai gửi thư mây', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel9.jpg'},
-    {Id: 9, Title: 'Duyên định', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel11.jpg'},
-    {Id: 10, Title: 'Sống hết mình', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel12.jpg'},
+    {Id: 1, Title: 'Làm bạn với bầu trời', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 20, PriceAfterSale: 16, PathImage: '../assets/images/novel1.jpg'},
+    {Id: 2, Title: 'Bong bóng lên trời', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 35, PriceAfterSale: 28, PathImage: '../assets/images/novel2.jpg'},
+    {Id: 3, Title: 'Ngồi khóc trên cây', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 15, PriceAfterSale: 11, PathImage: '../assets/images/novel3.jpg'},
+    {Id: 4, Title: 'Chúc ngày tốt lành', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 23, PriceAfterSale: 20, PathImage: '../assets/images/novel4.jpg'},
+    {Id: 5, Title: 'Mắt biếc', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 41, PriceAfterSale: 35, PathImage: '../assets/images/novel6.jpg'},
+    {Id: 6, Title: 'Thanh xuân để dành', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 16, PriceAfterSale: 13, PathImage: '../assets/images/novel7.jpg'},
+    {Id: 7, Title: 'Bồ công anh bất tử', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 23, PriceAfterSale: 19, PathImage: '../assets/images/novel8.jpg'},
+    {Id: 8, Title: 'Ai gửi thư mây', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 26, PriceAfterSale: 21, PathImage: '../assets/images/novel9.jpg'},
+    {Id: 9, Title: 'Duyên định', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 51, PriceAfterSale: 43, PathImage: '../assets/images/novel11.jpg'},
+    {Id: 10, Title: 'Sống hết mình', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 30, PriceAfterSale: 26, PathImage: '../assets/images/novel12.jpg'},
+];
+export const SkillBookList: Book[] = [
+    {Id: 1, Title: 'Vô ngã', AuthorName: 'Cy Wakeman', Description: 'Sách kỹ năng', PriceBeforsale: 56, PriceAfterSale: 39, PathImage: '../assets/images/skill1.jpg'},
+    {Id: 2, Title: 'Ai lấy miếng phô mai', AuthorName: 'Nhiều tác giả', Description: 'Sách kỹ năng', PriceBeforsale: 65, PriceAfterSale: 54, PathImage: '../assets/images/skill2.jpg'},
+    {Id: 3, Title: 'Ngày Tháng Nào Đã Ra Đi', AuthorName: 'Hồng Bối', Description: 'Sách kỹ năng', PriceBeforsale: 99, PriceAfterSale: 84, PathImage: '../assets/images/skill3.jpg'},
+    {Id: 4, Title: 'Nhẹ Bẫng', AuthorName: 'Francine Jay', Description: 'Sách kỹ năng', PriceBeforsale: 135, PriceAfterSale: 115, PathImage: '../assets/images/skill4.jpg'},
 ];
