@@ -10,7 +10,7 @@
 
 <div class="grid-container">
         <div class="book-image">
-            <img src="{{book.PathImage}}" alt="">
+            <img class="hvr-pulse-grow" src="{{book.PathImage}}" alt="">
         </div>
         <div class="book-detail">
                 <span style="font-size: 40px"><b>{{book.Title}}</b></span>
@@ -22,10 +22,10 @@
         </div>
         <div class="book-cost">
             <p><span><span class="price" id="product-price">
-        {{book.PriceAfterSale}}&nbsp;đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        {{book.PriceAfterSale}}.000&nbsp;đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
         <span class="price" id="old-price">
-            {{book.PriceBeforsale}}&nbsp;đ</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="discount-percent">-21%
+            {{book.PriceBeforsale}}.000&nbsp;đ</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="discount-percent">- 49%
             </span>
         </span>
     </p>
@@ -59,13 +59,13 @@
         </p>
         </div>
         <div class="book-like">
-            <div class="btn-vote-inactive"><a id="vote-product-button"><img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_vote.png"><span class="btn-vote-title"><span style="color: #2F80ED;padding-left: 8px;
+            <div class="btn-vote-inactive hvr-grow"><a id="vote-product-button"><img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_vote.png"><span class="btn-vote-title"><span style="color: #2F80ED;padding-left: 8px;
                 font-size: 1em;
                 font-weight: 650;">34 điểm. Bình chọn ngay!</span></span></a></div>
         </div>
 
         <div class="book-button">
-            <button type="button" title="Thêm vào giỏ hàng" class="btn-cart-to-cart" (click)="addtocart()"><div class="shopping-cart-icon"></div><span>Thêm vào giỏ hàng</span></button>
-            <button type="button" title="Mua ngay" is_buynow="true" class="btn-buy-now " (click)="muangay()"><span>Mua ngay</span></button>
+            <button type="button" title="Thêm vào giỏ hàng" class="btn-cart-to-cart hvr-grow" (click)="addtocart()"><div class="shopping-cart-icon"></div><span>Thêm vào giỏ hàng</span></button>
+            <button type="button" title="Mua ngay" is_buynow="true" class="btn-buy-now hvr-grow" (click)="muangay()"><span>Mua ngay</span></button>
         </div>
     
