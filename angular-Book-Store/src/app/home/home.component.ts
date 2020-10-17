@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HighBookList, NewBookList } from '../book/Book-Mock';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { from } from 'rxjs';
+
+import { Router } from '@angular/router';
+
+import { User } from '../_models';
+import { AccountService } from '../_services';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,10 +17,24 @@ import { from } from 'rxjs';
 export class HomeComponent implements OnInit {
   hbooks = HighBookList;
   nbooks = NewBookList;
+  user: User;
+  
 
-  constructor(
-  ) { }
+  constructor(private accountService: AccountService, private router: Router
+
+    ) {
+      this.user = this.accountService.userValue;
+
+
+
+  }
+  logout() {
+    this.accountService.logout();
+  }
+  
+
   ngOnInit(): void {
+    
   }
   customOptions: OwlOptions = {
     loop: true,
@@ -64,5 +85,15 @@ export class HomeComponent implements OnInit {
     },
     nav: false
   }
+ getbook1(item)
+ {
+  localStorage.setItem('bookselect',JSON.stringify(item));
+  this.router.navigate(['/book']);
 
+ }
+getbook2(item)
+ {
+  localStorage.setItem('bookselect',JSON.stringify(item));
+  this.router.navigate(['/book']);
+ }
 }
