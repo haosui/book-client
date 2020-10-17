@@ -47,7 +47,9 @@ body {
   .container {
     width: 1200px;
     padding: 0 50px;
-    max-width: 1200px; }
+    max-width: 1200px; 
+    margin-top: 14px;
+  }
   
   section {
     float: left;
@@ -91,13 +93,14 @@ body {
     header .header-top .item {
       display: flex;    }
     header .header-top .web-url {
-      font-size: 14px;
+      font-size: 20px;
       border-bottom: 1px solid;
-      color: #000;
-      line-height: 11px;
+      color: #fff;
+      line-height: 12px;
       display: inline-block;
-      font-style: italic;
-       }
+      font-style: bold;
+
+    }
       header .header-top .web-url:hover {
         text-decoration: none;
         border: 0; }
@@ -531,8 +534,9 @@ body {
   
     .container {
       width: 100%;
-      padding:  20px;
-      max-width: 100%; }
+      padding: 0 20px;
+      max-width: 100%; 
+    }
   
     .recent-book-sec .row {
       margin: 0 -20px; }
