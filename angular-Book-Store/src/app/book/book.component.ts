@@ -56,7 +56,6 @@ PriceAfterSale: 0
   getBook()
   {
     this.book  = JSON.parse(localStorage.getItem('bookselect'));
-    console.log(this.book);
   }
   addtocart()
   {
@@ -84,6 +83,7 @@ PriceAfterSale: 0
   }
   muangay()
   {
+      this.addtocart();
        this.router.navigate(['/cart']);
 
   }
