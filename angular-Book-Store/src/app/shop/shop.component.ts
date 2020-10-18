@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookList, NovelBookList } from '../book/Book-Mock';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -12,7 +14,7 @@ export class ShopComponent implements OnInit {
   cbooks = ChildrentBookList;
   ebooks = EnglishBookList;
   novbooks = NovelBookList;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +23,10 @@ export class ShopComponent implements OnInit {
   {
     
     localStorage.setItem('bookselect',JSON.stringify(item));
+  }
+  hi(item)
+  {
+    localStorage.setItem('bookselect',JSON.stringify(item));
+    this.router.navigate(['/book']);
   }
 }
