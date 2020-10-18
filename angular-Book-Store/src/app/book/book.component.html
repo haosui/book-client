@@ -1,0 +1,71 @@
+<div class="breadcrumb">
+
+    <div class="container">
+
+        <a class="breadcrumb-item"  href="index.html">Home</a>
+
+            <span class="breadcrumb-item active">Book</span>
+    </div>
+</div>
+
+<div class="grid-container">
+        <div class="book-image">
+            <img class="hvr-pulse-grow" src="{{book.PathImage}}" alt="">
+        </div>
+        <div class="book-detail">
+                <span style="font-size: 40px"><b>{{book.Title}}</b></span>
+                <br><span>Nhà cung cấp: <a href="#">Vinabooks</a></span>
+                <br><span>Tác giả: <b>{{book.AuthorName}}</b></span>
+                <br><span>Nhà xuất bản: <b>NXB Kim Đồng</b></span>
+                <br><span>Hình thức bìa: <b>Bìa Mềm</b></span>
+                <br>Đánh giá: <span>&nbsp;(6 đánh giá)</span>
+        </div>
+        <div class="book-cost">
+            <p><span><span class="price" id="product-price">
+        {{book.PriceAfterSale}}.000&nbsp;đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="price" id="old-price">
+            {{book.PriceBeforsale}}.000&nbsp;đ</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="discount-percent">- 49%
+            </span>
+        </span>
+    </p>
+    <p>
+                <br><span>Thời gian giao hàng&nbsp;&nbsp;
+        Địa điểm giao hàng&nbsp;&nbsp;
+        <a href="#"><span><u>Thay đổi</u></span>
+        </a></span>
+                <br><span>Chính sách đổi trả&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;Đổi trả sản phẩm trong 30 ngày&nbsp;&nbsp;
+        <a href="#"><span><u>Xem thêm</u></span>
+        </a></span>
+    </p>
+            <div>
+                <span style="font-size: 18px"><b>Số lượng: </b></span>
+                <button class="minus-button" name="-"  (click) ="minus()"> - </button>
+                <input type="text" class="book-quantity" name="quantity" [value]="bookQuantity">
+                <button  class="add-button" name="+" (click)="add()" >  + </button>
+            </div>
+
+        </div>
+        <div class="book-promotion">
+        <br>
+        <b style="font-size: 14px">Ưu đãi liên quan</b>
+        <p>
+            <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_promo_sp.svg?q=5177" alt=""> Giảm ngay 33k, đơn hàng từ 60k, thanh toán qua VNPAY
+            <br>
+            <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_promo_sp.svg?q=5177" alt=""> Giảm ngay 30K, đơn hàng từ 60K, thanh toán qua Ví ZaloPay
+            <br>
+            <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_promo_sp.svg?q=5177" alt=""> Tặng 1 Voucher bất kì từ chuỗi TCH, đơn hàng từ 199K
+        </p>
+        </div>
+        <div class="book-like">
+            <div class="btn-vote-inactive hvr-grow"><a id="vote-product-button"><img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_vote.png"><span class="btn-vote-title"><span style="color: #2F80ED;padding-left: 8px;
+                font-size: 1em;
+                font-weight: 650;">34 điểm. Bình chọn ngay!</span></span></a></div>
+        </div>
+
+        <div class="book-button">
+            <button type="button" title="Thêm vào giỏ hàng" class="btn-cart-to-cart hvr-grow" (click)="addtocart()"><div class="shopping-cart-icon"></div><span>Thêm vào giỏ hàng</span></button>
+            <button type="button" title="Mua ngay" is_buynow="true" class="btn-buy-now hvr-grow" (click)="muangay()"><span>Mua ngay</span></button>
+        </div>
+    

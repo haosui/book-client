@@ -24,6 +24,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPrice(this.cbook);
+    
   }
 
   getPrice(list): void {

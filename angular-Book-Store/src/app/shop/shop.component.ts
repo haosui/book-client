@@ -16,4 +16,9 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getbook(item)
+  {
+    
+    localStorage.setItem('bookselect',JSON.stringify(item));
+  }
 }
