@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -32,12 +33,12 @@
                             </div>
                             <div class="col-ms-4 item">
                                 <i class="fas fa-phone-alt"></i>
-                                <span class="ph-number">Hotline: 343 223 444</span>
+                                <span class="ph-number">Hotline: 1900.1508</span>
                             </div>
                         </div>
                         
                     </div>
-                    <div class="col-md-6" style="text-align: right;"><a href="#" class="web-url"><h5>www.bookstore.com</h5></a></div>
+                    <div class="col-md-6" style="text-align: right;"><a href="#" class="web-url hvr-grow-shadow" style="color: black">www.bookstore.com</a></div>
                 </div>
             </div>
         </div>
@@ -51,32 +52,32 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="navbar-item active">
-                                <a href="index.html" class="nav-link">Trang chính</a>
+                                <a href="index.html" class="nav-link hvr-underline-reveal">Trang chính</a>
                             </li>
                             <li class="navbar-item">
-                                <a [routerLink]="['/shop']" class="nav-link">Cửa hàng</a>
+                                <a [routerLink]="['/shop']" class="nav-link hvr-underline-reveal">Cửa hàng</a>
                             </li>
                             <li class="navbar-item">
-                                <a [routerLink]="['/about-us']" class="nav-link">Về chúng tôi</a>
+                                <a [routerLink]="['/about-us']" class="nav-link hvr-underline-reveal">Về chúng tôi</a>
                             </li>
                             <li class="navbar-item" *ngIf="user == null">
-                                <a [routerLink]="['/account/login']" routerLinkActive="router-link-active" class="nav-link">Đăng nhập</a>
+                                <a [routerLink]="['/account/login']" routerLinkActive="router-link-active" class="nav-link hvr-underline-reveal">Đăng nhập</a>
                             </li>
                             <li class="navbar-item" *ngIf="user !== null">
-                                <a class="nav-link">
-                                    <a  [routerLink]="['/users/edit/' + user.id]" routerLinkActive="active"
-                                    style="text-decoration: none;color:#00000080;"
+                                <a class="nav-link sign-out">
+                                    <a [routerLink]="['/users/edit/' + user.id]" routerLinkActive="active" class="hvr-underline-reveal"
+                                    style="text-decoration: none;color: black; float: left;"
                                     >
                                         <i class="pi pi-user">
                                         </i> 
-                                        &nbsp; {{user.firstName}} 
+                                        &nbsp;{{user.firstName}} 
                                     </a>
-                                    <a (click)="logout()" style="font-size: 14px;"> &nbsp; - &nbsp;Đăng xuất</a>
+                                    <a (click)="logout()">&nbsp;<span class="sign-in hvr-underline-reveal">Đăng xuất</span></a>
                                 </a>
                             </li>
                            
                         </ul>
-                    <a [routerLink]="['/cart']" >
+                    <a [routerLink]="['/cart']" class="cart-book-icon">
                         <div class="cart my-2 my-lg-0">
                             <span>
                                 <i class="fa fa-shopping-cart" aria-hidden="false"></i></span>
@@ -102,26 +103,26 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="address">
-                        <h4>Điạ chỉ</h4>
-                        <h6>9A, Đào Duy Anh Hà Nội, Việt Nam</h6>
-                        <h6>Call : 800 1234 5678</h6>
-                        <h6>Email : info@bookstore.com</h6>
+                        <h4>Cửa hàng</h4>
+                        <p>Địa chỉ: Lô 23, Tầng 1, Vincom Trần Duy Hưng, Trung Hoà, Cầu Giấy, Hà Nội</p>
+                        <p>Call: 1900.1508</p>
+                        <p>Email: info@bookstore.com</p>
                     </div>
                     <div class="timing">
                         <h4>Thời gian làm việc</h4>
-                        <h6>2 - 6: 7am - 10pm</h6>
-                        <h6>​​7: 8am - 10pm</h6>
-                        <h6>​CN: 8am - 11pm</h6>
+                        <p>Thứ 2 - 6: 7 AM - 8 PM</p>
+                        <p>​​Thứ 7: 8 AM - 10 PM</p>
+                        <p>​Chủ Nhật: 8 AM - 11 PM</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="navigation">
-                        <h4>Liên kết qua:</h4>
+                        <h4>Liên kết</h4>
                         <ul>
                             <li><a href="index.html">Trang chủ</a></li>
                             <li><a [routerLink]="['/about-us']" >Về chúng tôi</a></li>
                             <li><a href="privacy-policy.html">Chính sách cửa hàng</a></li>
-                            <li><a href="terms-conditions.html">Terms</a></li>
+                            <li><a href="terms-conditions.html">Điều khoản</a></li>
                             <li><a href="products.html">Sản phẩm</a></li>
                         </ul>
                     </div>
@@ -129,7 +130,7 @@
                         <h4>Help</h4>
                         <ul>
                             <li><a href="">Mua & Trả hàng</a></li>
-                            <li><a href="privacy-policy.html">Privacy</a></li>
+                            <li><a href="privacy-policy.html">Riêng tư</a></li>
                         </ul>
                     </div>
                 </div>
@@ -148,7 +149,7 @@
                                     <textarea placeholder="Nội dung"></textarea>
                                 </div>
                                 <div class="col-md-12">
-                                    <button class="btn black"> Gửi</button>
+                                    <button class="btn black">Gửi</button>
                                 </div>
                             </div>
                         </form>
@@ -156,19 +157,26 @@
                 </div>
             </div>
         </div>
-        <div class="copy-right">
+        <div class="copy-right" style="background-color: #E7E7E7;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>(C) 2017. All Rights Reserved. BookStore Wordpress Theme</h5>
+                        <h5 style="color: black">Sở Kế hoạch và Đầu tư Hà Nội cấp giấy phép ngày 20/10/2020</h5>
                     </div>
                     <div class="col-md-6">
                         <div class="share align-middle">
+<<<<<<< HEAD
                             <span class="fb"><i class="fab fa-facebook-square"></i></span>
                             <span class="instagram"><i class="fab fa-instagram"></i></span>
                             <span class="twitter"><i class="fab fa-twitter-square"></i></span>
                             <span class="pinterest"><i class="fab fa-pinterest"></i></span>
                             <span class="google"><i class="fab fa-google-plus-g"></i></span>
+=======
+                            <span class="fb"><i class="fab fa-facebook"></i></span>
+                            <span class="instagram"><i class="fab fa-instagram"></i></span>
+                            <span class="twitter"><i class="fab fa-twitter"></i></span>
+                            <span class="tumblr"><i class="fab fa-tumblr"></i></span>
+>>>>>>> 804e06af6335f408e185980aa9838f4ead94dfea
                         </div>
                     </div>
                 </div>

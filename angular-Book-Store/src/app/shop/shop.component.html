@@ -56,7 +56,7 @@
             <div class="recent-book-sec">
                 <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4" *ngFor="let item of novbooks">
-                        <div class="item"  (click)= "getbook(item)" >
+                        <div class="item"  (click)= "hi(item)" >
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3>{{item.Title}}</h3>
                             <h6><span class="price">{{item.PriceAfterSale}}.000đ</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
@@ -70,7 +70,7 @@
             <div class="recent-book-sec">
                 <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-4" *ngFor='let item of hbooks'>
-                        <div class="item"  (click)= "getbook(item)">
+                        <div class="item"  (click)= "hi(item)">
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3><a href="#">{{item.Title}}</a></h3>
                             <h6><span class="price">{{item.PriceAfterSale}}.000đ</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
