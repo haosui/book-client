@@ -4,7 +4,7 @@
     padding: 0;
     width: 1100px;
     height: 650px;
-    grid-template-columns: 1fr 1.5fr 0.7fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr 0.5fr 1.2fr 1fr 1fr;
     grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
     gap: 10px 0px;
     grid-template-areas: "book-image book-image . book-detail book-detail book-detail" "book-image book-image . book-cost book-cost book-cost" "book-image book-image . book-promotion book-promotion book-promotion" "book-button book-button . book-like book-like book-like";
@@ -297,5 +297,46 @@
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
   }
+
+  .breadcrumb {
+    margin-left: 15px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 50px;
+    border-radius: 0; }
+    .breadcrumb a {
+      font-weight: 200;
+      color: #000;
+      font-size: 14px; }
+    .breadcrumb .breadcrumb-item.active {
+      color: #000;
+      font-size: 14px;
+      font-weight: 300; }
+
+.btn-3 {
+    height: 50px;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-3 .minus-button {
+    width: 50px;
+    height: 100%;
+}
+
+.btn-3 .book-quantity {
+    width: calc(100% - 50px - 50px);
+    height: 100%;
+    border-radius: 0;
+}
+
+.btn-3 .add-button {
+    width: 50px;
+    height: 100%;
+}
+
 
   

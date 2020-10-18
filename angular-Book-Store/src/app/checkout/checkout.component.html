@@ -87,6 +87,16 @@
                                                             <li
                                                                 class="fhs_checkout_block_radio_list_item fhs_radio_top">
                                                                 <div><label class="fhs-radio-big">
+                                                                        <div style="font-weight: 600;">Giao hàng nhanh: 30.000 đ</div><input type="radio"
+                                                                            id="fhs_checkout_shippingmethod_vietnamshippingnormal_vietnamshippingnormal"
+                                                                            name="fhs_checkout_shippingmethod_option"
+                                                                            class="fhs_checkout_shippingmethod_option"
+                                                                            value="vietnamshippingnormal_vietnamshippingnormal"
+                                                                            checked=""><span
+                                                                            class="radiomark-big"></span>
+                                                                            <div class="notice">Thời gian giao hàng: Hôm nay</div>
+                                                                    </label></div>
+                                                                    <div><label class="fhs-radio-big">
                                                                         <div style="font-weight: 600;">Giao hàng tiêu
                                                                             chuẩn: 15.000 đ</div><input type="radio"
                                                                             id="fhs_checkout_shippingmethod_vietnamshippingnormal_vietnamshippingnormal"
@@ -95,6 +105,7 @@
                                                                             value="vietnamshippingnormal_vietnamshippingnormal"
                                                                             checked=""><span
                                                                             class="radiomark-big"></span>
+                                                                            <div class="notice">Thời gian giao hàng: 1/11/2020 - 5/11/2020</div>
                                                                     </label></div>
                                                             </li>
                                                         </ul>
@@ -250,17 +261,17 @@
 
                                         <!-- Promotion start -->
                                         <div class="fhs_checkout_block fhs_checkout_block_coupon_desktop">
-                                            <div class="fhs_checkout_block_title">Mã khuyến mãi/Mã quà tặng</div>
+                                            <div class="fhs_checkout_block_title">Mã khuyến mãi / Mã quà tặng</div>
                                             <div class="fhs_checkout_block_content">
                                                 <div class="fhs_checkout_block_address_block">
                                                     <div
                                                         class="fhs-input-box fhs-input-btn fhs-input-group-horizontal-coupon">
-                                                        <label>Mã KM/Quà tặng</label>
+                                                        <label>Mã KM / Quà tặng</label>
                                                         <div class="fhs-input-item">
                                                             <div class="fhs-input-group">
                                                                 <input class="fhs-textbox" type="text"
                                                                     validate_type="text"
-                                                                    placeholder="Nhập mã khuyến mãi/Quà tặng"
+                                                                    placeholder="Nhập mã khuyến mãi / Quà tặng"
                                                                     id="fhs_checkout_coupon" name="coupon" value=""
                                                                     maxlength="200">
                                                                 <span id="fhs_checkout_btn_coupon"
@@ -318,7 +329,7 @@
                                                                 id="fhs_checkout_vat_checkbox" value="1">
                                                             <label class="fhs_input_checkbox"
                                                                 for="fhs_checkout_vat_checkbox">Xuất hóa đơn
-                                                                VAT.</label>
+                                                                VAT</label>
                                                         </div>
                                                         <div class="fhs-input-item">
                                                             <div class="fhs-input-group">
@@ -364,15 +375,14 @@
                                                         <div class="fhs_checkout_products_item_detail" >
                                                             <div class="fhs_checkout_products_item_name">
                                                                 <div> {{item.Title }} </div>
-                                                                <div class="notice">Sắp có hàng. Ngày dự kiến
-                                                                    30/09/2020.</div>
+                                                                
                                                             </div>
                                                             <div class="fhs_checkout_products_item_price">
                                                                 <div> {{item.Price}}.000đ </div>
                                                             </div>
                                                             <div class="fhs_checkout_products_item_qty"><span>Số lượng:
                                                                 </span> {{item.numberOrder}}  </div>
-                                                            <div class="fhs_checkout_products_item_total"> {{item.Price}}.000đ</div>
+                                                            <div class="fhs_checkout_products_item_total"> {{item.Price*item.numberOrder}}.000đ</div>
                                                         </div>
                                                     </div>
                                                 </div>

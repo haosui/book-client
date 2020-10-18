@@ -58,7 +58,7 @@
                              
                               <div class="price-originals">
                                 
-                                   <h1> {{item.Price}}.000VNĐ</h1>
+                                   <h1> {{item.Price}}.000 đ</h1>
                               
                               </div>
   
@@ -79,10 +79,10 @@
                         
                               </div>
                               <div class="cart-price-total">
-                                <span class="text-price-total">Thành tiền</span>
+                                <span class="text-price-total">Tổng cộng</span>
                                 <span class="cart-price">
   
-                                  <span class="price"> {{item.Price}}.000VNĐ</span> </span>
+                                  <span class="price"> {{item.Price * item.numberOrder}}.000 đ</span> </span>
                               </div>
                             </div>
                           </div>
@@ -103,8 +103,8 @@
                             <div class="border-product"></div>
                             <div class="total-cart-page title-final-total">
                               <div class="title-cart-page-left">
-                                Tổng tiền (đã bao gồm VAT)</div>
-                              <div class="number-cart-page-right"><span class="price"> {{total}}.000VNĐ</span></div>
+                                Thành tiền<span style="font-size: 13px;"><br>(đã bao gồm VAT nếu có)</span></div>
+                              <div class="number-cart-page-right"><span class="price"> {{total}}.000 đ</span></div>
                             </div>
                             <div class="checkout-type-button-cart" style="text-align: center;">
                               <a [routerLink]="['/checkout']" >

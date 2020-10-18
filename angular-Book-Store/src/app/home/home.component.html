@@ -150,7 +150,7 @@
                 <div class="col-lg-3 col-md-6" *ngFor="let item of nbooks">
                     <div class="item" (click)= "getbook1(item)">
                         <img width="160" height="250" src={{item.PathImage}} alt="img">
-                        <h3>{{item.Title}}</h3>
+                        <h3 class="h3-title">{{item.Title}}</h3>
                         <h6><span class="price">{{item.PriceAfterSale}}.000 đ </span> / <a >Mua ngay</a>
                         </h6>
                         <div class="hover">
@@ -168,9 +168,9 @@
             <figure style="background:url(../assets/images/about-img.jpg)no-repeat;"></figure>
         </div>
         <div class="about-content">
-            <h2>BookStore</h2>
-            <p>Để xây dựng Thương hiệu mạnh, một trong những định hướng quan trọng hàng đầu của Book Store là chiến lược phát triển nguồn nhân lực - mấu chốt của mọi sự thành công.</p>
-            <p>Book Store có hơn 2.200 CB-CNV, trình độ chuyên môn giỏi, nhiệt tình, năng động, chuyên nghiệp. Lực lượng quản lý Book Store có thâm niên công tác, giỏi nghiệp vụ nhiều kinh nghiệm.</p>
+            <h2 style="color: black; font-weight: 600;">BookStore</h2>
+            <p style="color: black; font-weight: 450;">Để xây dựng Thương hiệu mạnh, một trong những định hướng quan trọng hàng đầu của Book Store là chiến lược phát triển nguồn nhân lực - mấu chốt của mọi sự thành công.</p>
+            <p style="color: black; font-weight: 450;">Book Store có hơn 2.200 CB-CNV, trình độ chuyên môn giỏi, nhiệt tình, năng động, chuyên nghiệp. Lực lượng quản lý Book Store có thâm niên công tác, giỏi nghiệp vụ nhiều kinh nghiệm.</p>
             <div class="btn-sec">
                 <a [routerLink]="['/shop']" class="btn yellow">Mua ngay</a>
                 <a [routerLink]="['/account/login']" class="btn black">Đăng ký</a>
@@ -187,7 +187,7 @@
                 <div class="col-lg-2 col-md-3 col-sm-4" *ngFor='let item of hbooks'>
                     <div class="item" (click)= "getbook2(item)">
                         <img width="160" height="250" src={{item.PathImage}} alt="img">
-                        <h3><a >{{item.Title}} </a></h3>
+                        <h3 class="h3-title"><a >{{item.Title}} </a></h3>
                         <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a >Mua ngay</a></h6>
                     </div>
                 </div>
@@ -203,23 +203,23 @@
             <ul>
                 <li>
                     <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                    <h3>MUA SẮM AN TOÀN</h3>
+                    <h3 style="color: black; font-weight: 600;">MUA SẮM AN TOÀN</h3>
                     <h5></h5>
-                    <h6>Nhà sách chúng tôi cam kết về chất lượng của cuốn sách, nếu có bất cứ thắc mắc gì xin hãy liên lạc để được tư vấn và hưởng quyền lợi</h6>
+                    <h6 style="color: black; font-weight: 450;">Nhà sách chúng tôi cam kết về chất lượng của cuốn sách, nếu có bất cứ thắc mắc gì xin hãy liên lạc để được tư vấn và hưởng quyền lợi</h6>
                 </li>
                 <li>
                     <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
-                    <h3>30 NGÀY ĐỔI TRẢ</h3>
+                    <h3 style="color: black; font-weight: 600;">30 NGÀY ĐỔI TRẢ</h3>
                     <h5></h5>
 
-                    <h6>Trong trường hợp cuốn sách bị lỗi như: rách, mất trang, nhòe, quý khách có thể gửi trả trong 30 ngày mà không phát sinh chi phí</h6>
+                    <h6 style="color: black; font-weight: 450;">Trong trường hợp cuốn sách bị lỗi như: rách, mất trang, nhòe, quý khách có thể gửi trả trong 30 ngày mà không phát sinh chi phí</h6>
 
                 </li>
                 <li>
                     <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                    <h3>HỖ TRỢ 24/7</h3>
+                    <h3 style="color: black; font-weight: 600;">HỖ TRỢ 24/7</h3>
                     <h5></h5>
-                    <h6>Áp dụng công nghệ trong kinh doanh, cửa hàng chúng tôi phục vụ suốt 24 tiếng với 7 ngày trong tuần, sẵn sàng phục vụ chu đáo</h6>
+                    <h6 style="color: black; font-weight: 450;">Áp dụng công nghệ trong kinh doanh, cửa hàng chúng tôi phục vụ suốt 24 tiếng với 7 ngày trong tuần, sẵn sàng phục vụ chu đáo</h6>
                 </li>
             </ul>
         </div>
@@ -230,9 +230,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="detail">
-                        <h3>Giảm giá 50% sách tiếng Nhật</h3>
-                        <h6>Chúng tôi đang có chương trình khuyến mãi dành cho Wjbu với số lượng có hạn</h6>
-                        <a [routerLink]="['/shop']" class="btn blue-btn">Xem chi tiết</a>
+                        <h3 style="color: black; font-weight: 600;">Giảm giá 50% sách tiếng Nhật</h3>
+                        <h6 style="color: black; font-weight: 450;">Chúng tôi đang có chương trình khuyến mãi dành cho Wjbu với số lượng có hạn</h6>
+                        <a [routerLink]="['/shop']" class="btn blue-btn" style=" font-weight: 450;">Xem chi tiết</a>
                         <span class="icon-point percentage">
                             <img src="../assets/images/precentagae.png" alt="">
                         </span>
@@ -240,9 +240,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="detail">
-                        <h3>Mua 5 tặng 1</h3>
-                        <h6>Khi đặt hàng từ 5 cuốn sách trở lên, quý khách sẽ được tặng 1 cuốn sách bất kỳ</h6>
-                        <a [routerLink]="['/shop']" class="btn blue-btn">Xem chi tiết</a>
+                        <h3 style="color: black; font-weight: 600;">Mua 5 tặng 1</h3>
+                        <h6 style="color: black; font-weight: 450;">Khi đặt hàng từ 5 cuốn sách trở lên, quý khách sẽ được tặng 1 cuốn sách bất kỳ</h6>
+                        <a [routerLink]="['/shop']" class="btn blue-btn" style=" font-weight: 450;">Xem chi tiết</a>
                         <span class="icon-point amount"><img src="../assets/images/amount.png" alt=""></span>
                     </div>
                 </div>

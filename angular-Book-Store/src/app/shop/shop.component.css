@@ -1156,3 +1156,7 @@ body {
   
   /*# sourceMappingURL=styles.css.map */
   
+  .h3-title {
+    color: black !important;
+    font-weight: 550 !important;
+  }
