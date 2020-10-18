@@ -41,6 +41,7 @@ import {CalendarModule} from 'primeng/calendar';
 import {InputNumberModule} from 'primeng/inputnumber';
 import {DropdownModule} from 'primeng/dropdown';
 import {DialogModule} from 'primeng/dialog';
+import {RatingModule} from 'primeng/rating';
 
 
 
@@ -93,6 +94,7 @@ import { AlertComponent } from './_components';
     DropdownModule,
     DialogModule,
     FormsModule,
+
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

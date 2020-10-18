@@ -29,14 +29,14 @@ export class ReceInfoComponent implements OnInit {
   
   ];
 huyen1 = [
-  { id: '0', name: 'cầu Giấy' },
+  { id: '0', name: 'Cầu Giấy' },
   { id: '1', name: 'Long Biên' },
   
-  { id: '2', name: 'tp Hải Dương' },
+  { id: '2', name: 'TP Hải Dương' },
   { id: '3', name: 'Thanh Hà' },
 ];
 xa1 = [
-  { id: '0', name: 'Xuân thủy' },
+  { id: '0', name: 'Xuân Thủy' },
   { id: '1', name: 'Hồ Tùng Mậu' },
 
 
