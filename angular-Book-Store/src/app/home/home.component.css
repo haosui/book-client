@@ -188,14 +188,17 @@
           text-align: center;
           width: 100%; }
           .slider .slide .content .title h3 {
+            color: white;
             font-size: 30px;
             text-transform: uppercase;
-            font-weight: 300;
-            margin-bottom: 15px; }
+            font-weight: 600;
+            margin-bottom: 30px;
+          }
           .slider .slide .content .title h5 {
+            color: white;
             font-size: 24px;
             text-transform: uppercase;
-            font-weight: 300;
+            font-weight: 500;
             margin-bottom: 40px; }
     .slider .owl-dots {
       position: absolute;

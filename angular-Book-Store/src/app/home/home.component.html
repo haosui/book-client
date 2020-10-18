@@ -10,9 +10,9 @@
                             <img src="../assets/images/panner1.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -25,9 +25,9 @@
                             <img src="../assets/images/panner2.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -39,9 +39,9 @@
                             <img src="../assets/images/panner3.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -53,9 +53,9 @@
                             <img src="../assets/images/panner4.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -67,9 +67,9 @@
                             <img src="../assets/images/panner5.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -81,9 +81,9 @@
                             <img src="../assets/images/panner6.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -95,9 +95,9 @@
                             <img src="../assets/images/panner7.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -109,9 +109,9 @@
                             <img src="../assets/images/panner8.jpg" alt="slide1">
                             <div class="content">
                                 <div class="title">
-                                    <h3>welcome to bookstore</h3>
-                                    <h5>Discover the best books online with us</h5>
-                                    <a href="#" class="btn">shop books</a>
+                                    <h3>Chào mừng đến với bookstore</h3>
+                                    <h5>Khám phá kho sách trực tuyến lớn nhất Việt Nam</h5>
+                                    <a [routerLink]="['/shop']" class="btn">Click ngay!</a>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                     <div class="item" (click)= "getbook1(item)">
                         <img width="160" height="250" src={{item.PathImage}} alt="img">
                         <h3>{{item.Title}}</h3>
-                        <h6><span class="price">${{item.PriceAfterSale}} </span> / <a >Buy Now</a>
+                        <h6><span class="price">{{item.PriceAfterSale}}.000 đ </span> / <a >Mua ngay</a>
                         </h6>
                         <div class="hover">
                             <a >
@@ -168,12 +168,12 @@
             <figure style="background:url(../assets/images/about-img.jpg)no-repeat;"></figure>
         </div>
         <div class="about-content">
-            <h2>About bookstore,</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and Scrambled it to make a type and typesetting industry. Lorem Ipsum has been the book. </p>
-            <p>It has survived not only fiveLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's printer took a galley of type and</p>
+            <h2>BookStore</h2>
+            <p>Để xây dựng Thương hiệu mạnh, một trong những định hướng quan trọng hàng đầu của Book Store là chiến lược phát triển nguồn nhân lực - mấu chốt của mọi sự thành công.</p>
+            <p>Book Store có hơn 2.200 CB-CNV, trình độ chuyên môn giỏi, nhiệt tình, năng động, chuyên nghiệp. Lực lượng quản lý Book Store có thâm niên công tác, giỏi nghiệp vụ nhiều kinh nghiệm.</p>
             <div class="btn-sec">
-                <a href="shop.html" class="btn yellow">shop books</a>
-                <a href="login.html" class="btn black">subscriptions</a>
+                <a [routerLink]="['/shop']" class="btn yellow">Mua ngay</a>
+                <a [routerLink]="['/account/login']" class="btn black">Đăng ký</a>
             </div>
         </div>
     </section>
@@ -188,13 +188,13 @@
                     <div class="item" (click)= "getbook2(item)">
                         <img width="160" height="250" src={{item.PathImage}} alt="img">
                         <h3><a >{{item.Title}} </a></h3>
-                        <h6><span class="price">${{item.PriceAfterSale}} </span> / <a >Buy Now</a></h6>
+                        <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a >Mua ngay</a></h6>
                     </div>
                 </div>
 
             </div>
             <div class="btn-sec">
-                <a href="http://localhost:4200/book" class="btn gray-btn">view all books</a>
+                <a [routerLink]="['/shop']" class="btn black-btn">Xem tất cả</a>
             </div>
         </div>
     </section>
@@ -203,23 +203,23 @@
             <ul>
                 <li>
                     <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                    <h3>Mua sắm an toàn</h3>
+                    <h3>MUA SẮM AN TOÀN</h3>
                     <h5></h5>
-                    <h6>Nhà sách chúng tôi cam kết về chất lượng của cuốn sách, nếu có bất cứ thắc mắc gì xin hãy liên lạc để được tư vấn và hưởng quyền lơi...</h6>
+                    <h6>Nhà sách chúng tôi cam kết về chất lượng của cuốn sách, nếu có bất cứ thắc mắc gì xin hãy liên lạc để được tư vấn và hưởng quyền lợi</h6>
                 </li>
                 <li>
                     <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
-                    <h3>30- NGÀY ĐỔI TRẢ</h3>
+                    <h3>30 NGÀY ĐỔI TRẢ</h3>
                     <h5></h5>
 
-                    <h6>Trong trường hợp cuốn sách bị lỗi như: rách, mất trang, nhòe quý khách có thể gửi trả trong 30 ngày. Cam kết uy tín ...</h6>
+                    <h6>Trong trường hợp cuốn sách bị lỗi như: rách, mất trang, nhòe, quý khách có thể gửi trả trong 30 ngày mà không phát sinh chi phí</h6>
 
                 </li>
                 <li>
                     <span class="icon chat"><i class="fa fa-comments" aria-hidden="true"></i></span>
-                    <h3>24/7 HỖ TRỢ</h3>
+                    <h3>HỖ TRỢ 24/7</h3>
                     <h5></h5>
-                    <h6>Áp dụng công nghệ trong kinh doanh, cửa hàng chúng tôi phục vụ suốt 24 tiếng với 7 ngày trong tuần, sẵn sàng phục vụ chu đáo...</h6>
+                    <h6>Áp dụng công nghệ trong kinh doanh, cửa hàng chúng tôi phục vụ suốt 24 tiếng với 7 ngày trong tuần, sẵn sàng phục vụ chu đáo</h6>
                 </li>
             </ul>
         </div>
@@ -230,9 +230,9 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="detail">
-                        <h3>Top 50% OFF on Selected</h3>
-                        <h6>We are now offering some good discount on selected books go and shop them</h6>
-                        <a href="products.html" class="btn blue-btn">view all books</a>
+                        <h3>Giảm giá 50% sách tiếng Nhật</h3>
+                        <h6>Chúng tôi đang có chương trình khuyến mãi dành cho Wjbu với số lượng có hạn</h6>
+                        <a [routerLink]="['/shop']" class="btn blue-btn">Xem chi tiết</a>
                         <span class="icon-point percentage">
                             <img src="../assets/images/precentagae.png" alt="">
                         </span>
@@ -240,9 +240,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="detail">
-                        <h3>Shop $ 500 Above and Get Extra!</h3>
-                        <h6>We are now offering some good discount on selected books go and shop them</h6>
-                        <a href="products.html" class="btn blue-btn">view all books</a>
+                        <h3>Mua 5 tặng 1</h3>
+                        <h6>Khi đặt hàng từ 5 cuốn sách trở lên, quý khách sẽ được tặng 1 cuốn sách bất kỳ</h6>
+                        <a [routerLink]="['/shop']" class="btn blue-btn">Xem chi tiết</a>
                         <span class="icon-point amount"><img src="../assets/images/amount.png" alt=""></span>
                     </div>
                 </div>
@@ -254,39 +254,41 @@
             <owl-carousel-o [options]="quotesOption">
                 <ng-template carouselSlide>
                     <div class="item">
-                        <h3>A truly great book should be read in youth, again in maturity and once more in old age, as a fine building should be seen by morning light, at noon and by moonlight.
+                        <h3>
+                            Người đọc quá nhiều và dùng tới bộ óc quá ít sẽ rơi vào thói quen suy nghĩ lười biếng.
                         </h3>
                         <div class="box-user">
-                            <h4 class="author">Robertson Davies</h4>
+                            <h4 class="author">Albert Einstein</h4>
                         </div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="item">
-                        <h3>Every man who knows how to read has it in his power to magnify himself, to multiply the ways in which he exists, to make his life full, significant and interesting.
-
+                        <h3>
+                            Một người không đọc sách chẳng hơn gì kẻ không biết đọc.
                         </h3>
                         <div class="box-user">
-                            <h4 class="author">Aldous Huxley</h4>
+                            <h4 class="author">Mark Twain</h4>
                         </div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="item">
-                        <h3>A truly good book teaches me better than to read it. I must soon lay it down, and commence living on its hint. What I began by reading, I must finish by acting.
+                        <h3>
+                            Đọc sách hay cũng giống như trò truyện với các bộ óc tuyệt vời nhất của những thế kỷ đã trôi qua.
                         </h3>
                         <div class="box-user">
-                            <h4 class="author">Thomas Carlyle</h4>
+                            <h4 class="author">Rene Descartes</h4>
                         </div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="item">
-                        <h3>For books are more than books, they are the life, the very heart and core of ages past, the reason why men worked and died, the essence and quintessence of their lives.
-
+                        <h3>
+                            Sách hay, cũng như bạn tốt, ít và được chọn lựa; chọn lựa càng nhiều, thưởng thức càng nhiều.
                         </h3>
                         <div class="box-user">
-                            <h4 class="author">Marcus Tullius Cicero</h4>
+                            <h4 class="author">Louisa May Alcott</h4>
                         </div>
                     </div>
                 </ng-template>
