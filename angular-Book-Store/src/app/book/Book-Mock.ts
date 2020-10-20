@@ -72,3 +72,9 @@ export const NovelBookList: Book[] = [
     {Id: 69, Title: 'Duyên định', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel11.jpg'},
     {Id: 610, Title: 'Sống hết mình', AuthorName: '', Description: 'Tiểu thuyết', PriceBeforsale: 19, PriceAfterSale: 10, PathImage: '../assets/images/novel12.jpg'},
 ];
+export const SkillBookList: Book[] = [
+    {Id: 1, Title: 'Vô ngã', AuthorName: 'Cy Wakeman', Description: 'Sách kỹ năng', PriceBeforsale: 56, PriceAfterSale: 39, PathImage: '../assets/images/skill1.jpg'},
+    {Id: 2, Title: 'Ai lấy miếng phô mai', AuthorName: 'Nhiều tác giả', Description: 'Sách kỹ năng', PriceBeforsale: 65, PriceAfterSale: 54, PathImage: '../assets/images/skill2.jpg'},
+    {Id: 3, Title: 'Ngày Tháng Nào Đã Ra Đi', AuthorName: 'Hồng Bối', Description: 'Sách kỹ năng', PriceBeforsale: 99, PriceAfterSale: 84, PathImage: '../assets/images/skill3.jpg'},
+    {Id: 4, Title: 'Nhẹ Bẫng', AuthorName: 'Francine Jay', Description: 'Sách kỹ năng', PriceBeforsale: 135, PriceAfterSale: 115, PathImage: '../assets/images/skill4.jpg'},
+];

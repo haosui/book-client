@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookList, NovelBookList } from '../book/Book-Mock';
+import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookList, NovelBookList,SkillBookList } from '../book/Book-Mock';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class ShopComponent implements OnInit {
   hbooks = HighBookList;
-  nbooks = NewBookList;
-  rbooks = ReBookList;
   cbooks = ChildrentBookList;
   ebooks = EnglishBookList;
   novbooks = NovelBookList;
+  skbooks = SkillBookList;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {

@@ -10,35 +10,48 @@
     </div>
     <section class="static about-sec">
         <div class="container">
-            
+            <h2>Truyện thiếu nhi</h2>
+            <div class="recomended-sec recomended-sec-1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" *ngFor="let item of cbooks">
+                        <div class="item"  (click)= "getbook(item)">
+                            <img width="160" height="250" src={{item.PathImage}} alt="img">
+
+                            <h3 class="h3-title">{{item.Title}}</h3>
+                            <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a href="http://localhost:4200/book">Mua ngay</a></h6>
+                            <a class="hover" href="http://localhost:4200/book">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Sách kỹ năng</h2>
+            <div class="recomended-sec recomended-sec-1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" *ngFor="let item of skbooks">
+                        <div class="item"  (click)= "getbook(item)">
+                            <img width="160" height="250" src={{item.PathImage}} alt="img">
+
+                            <h3>{{item.Title}}</h3>
+                            <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
+                            <a class="hover" href="http://localhost:4200/book">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h2>Sách tiếng anh</h2>
             <div class="recomended-sec recomended-sec-1">
                 <div class="row">
                     <div class="col-lg-3 col-md-6" *ngFor="let item of ebooks">
                         <div class="item"  (click)= "getbook(item)">
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
-                            <h3 class="h3-title">{{item.Title}}</h3>
-                            <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a href="http://localhost:4200/book">Mua ngay</a></h6>
+                            <h3>{{item.Title}}</h3>
+                            <h6><span class="price">{{item.PriceAfterSale}}.000đ</span> / <a href="http://localhost:4200/book">Buy Now</a></h6>
                             <a class="hover" href="http://localhost:4200/book">
                             </a>
                         </div>
                     </div>
-
-                </div>
-            </div>
-            <h2>Truyện Thiếu Nhi</h2>
-            <div class="recomended-sec recomended-sec-1">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6" *ngFor="let item of cbooks">
-                        <div class="item"  (click)= "getbook(item)">
-                            <img width="160" height="250" src={{item.PathImage}} alt="img">
-                            <h3 class="h3-title">{{item.Title}}</h3>
-                            <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a href="http://localhost:4200/book">Mua ngay</a></h6>
-                            <a class="hover" href="http://localhost:4200/book">
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
             <h2>Tiểu thuyết hay nhất</h2>
@@ -49,11 +62,11 @@
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
                             <h3 class="h3-title">{{item.Title}}</h3>
                             <h6><span class="price" >{{item.PriceAfterSale}}.000 đ</span> / <a href="http://localhost:4200/book">Mua ngay</a></h6>
+
                             <a class="hover" href="http://localhost:4200/book">
                             </a>
                         </div>
                     </div>
-
                 </div>
             </div>
             <h2>Sách được đánh giá cao</h2>
@@ -62,13 +75,14 @@
                     <div class="col-lg-2 col-md-3 col-sm-4" *ngFor='let item of hbooks'>
                         <div class="item"  (click)= "hi(item)">
                             <img width="160" height="250" src={{item.PathImage}} alt="img">
+
                             <h3 class="h3-title"><a href="#">{{item.Title}}</a></h3>
                             <h6><span class="price">{{item.PriceAfterSale}}.000 đ</span> / <a href="http://localhost:4200/book">Mua ngay</a></h6>
                             <a class="hover" href="http://localhost:4200/book">
                             </a>
+
                         </div>
                     </div>
-
                 </div>
                 <div class="btn-sec">
                     <button class="btn blue-btn">Xem thêm</button>
@@ -77,5 +91,4 @@
         </div>
     </section>
 </body>
-
 </html>
