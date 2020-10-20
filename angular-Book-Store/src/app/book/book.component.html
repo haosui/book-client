@@ -2,9 +2,9 @@
 
     <div class="container">
 
-        <a class="breadcrumb-item"  href="index.html">Home</a>
+        <a class="breadcrumb-item"  href="index.html" style="color: black; font-weight: 500;">Trang chủ</a>
 
-            <span class="breadcrumb-item active">Book</span>
+            <span class="breadcrumb-item active" style="color: black; font-weight: 500;">Sách</span>
     </div>
 </div>
 
@@ -18,14 +18,14 @@
                 <br><span>Tác giả: <b>{{book.AuthorName}}</b></span>
                 <br><span>Nhà xuất bản: <b>NXB Kim Đồng</b></span>
                 <br><span>Hình thức bìa: <b>Bìa Mềm</b></span>
-                <br>Đánh giá: <span>&nbsp;(6 đánh giá)</span>
+                <br>Đánh giá:<span>&nbsp;(6 đánh giá)</span>
         </div>
         <div class="book-cost">
             <p><span><span class="price" id="product-price">
         {{book.PriceAfterSale}}.000&nbsp;đ</span>&nbsp;&nbsp;&nbsp;&nbsp;
         <span class="price" id="old-price">
             {{book.PriceBeforsale}}.000&nbsp;đ</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;<span class="discount-percent">- 49%
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="discount-percent">– 49%
             </span>
         </span>
     </p>
@@ -41,9 +41,11 @@
     </p>
             <div>
                 <span style="font-size: 18px"><b>Số lượng: </b></span>
-                <button class="minus-button" name="-"  (click) ="minus()"> - </button>
-                <input type="text" class="book-quantity" name="quantity" [value]="bookQuantity">
-                <button  class="add-button" name="+" (click)="add()" >  + </button>
+                <div class="btn-3">
+                    <button class="minus-button" name="–"  (click) ="minus()"> – </button>
+                    <input type="text" class="book-quantity" name="quantity" [value]="bookQuantity">
+                    <button  class="add-button" name="+" (click)="add()" >  + </button>
+                </div>
             </div>
 
         </div>

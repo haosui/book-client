@@ -1,9 +1,8 @@
 import { Component, OnInit , Output, EventEmitter, Inject, Injectable} from '@angular/core';
 import { HighBookList, NewBookList, ReBookList, ChildrentBookList, EnglishBookList, NovelBookList } from '../book/Book-Mock';
-import { NzRateModule } from 'ng-zorro-antd/rate';
-import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { CartBook } from 'src/app/cart/cartBook';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-book',
@@ -20,6 +19,7 @@ export class BookComponent implements OnInit {
   novbooks = NovelBookList;
   bookQuantity = 1;
   
+
  cbook: any;
  book = {
   Id: 0,
@@ -89,3 +89,4 @@ PriceAfterSale: 0
   }
 
 }
+

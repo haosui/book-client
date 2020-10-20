@@ -19,8 +19,8 @@
                                         <div style="background-color: white; margin-left: 30px;">
                                             <div>
                                                 <h5 class="card-header">Thông tin người nhận </h5>
-                                                 <button class="button4" (click) = "onEditt()"> Lưu</button>
-                                                 <button class="button4"  (click)="xoaform()">Xóa</button>
+                                                 <button class="button4 hvr-grow blue-btn" (click) ="onEditt()">Lưu</button>
+                                                 <button class="button4 hvr-grow gray-btn"  (click)="xoaform()">Xóa</button>
                                             </div>
                                             <div class="my-account" >
                                                 <style>
@@ -50,7 +50,7 @@
                                                         </div>
                                         
                                                         <div class="form-group">
-                                                            <label>tinh</label>
+                                                            <label>Tỉnh/Thành phố</label>
                                                             <select formControlName="tinh" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.tinh.errors }" (blur)="onBlurtinh(this)">
                                                                 <option *ngFor="let order of tinh; let i = index" [value]="tinh[i].id">
                                                                     {{tinh[i].name}}
@@ -59,12 +59,12 @@
                                         
                                                             
                                                             <div *ngIf="submitted && f.tinh.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.tinh.errors.required">tinh is required</div>
+                                                                <div *ngIf="f.tinh.errors.required">Tỉnh is required</div>
                                                             </div>
                                                         </div>
                                         
                                                         <div class="form-group">
-                                                            <label>huyen</label>
+                                                            <label>Quận/Huyện</label>
                                                             <select formControlName="huyen" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.huyen.errors }" (blur)="onBlurhuyen(this)">
                                                                 <option *ngFor="let order of huyen; let i = index" [value]="huyen[i].id">
                                                                     {{huyen[i].name}}
@@ -73,11 +73,11 @@
                                         
                                                             
                                                             <div *ngIf="submitted && f.huyen.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.huyen.errors.required">huyen is required</div>
+                                                                <div *ngIf="f.huyen.errors.required">Huyện is required</div>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label>xa</label>
+                                                            <label>Xã/Phường</label>
                                                             <select formControlName="xa" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.xa.errors }">
                                                                 <option *ngFor="let order of xa; let i = index" [value]="xa[i].id">
                                                                     {{xa[i].name}}
@@ -86,7 +86,7 @@
                                         
                                                             
                                                             <div *ngIf="submitted && f.xa.errors" class="invalid-feedback">
-                                                                <div *ngIf="f.xa.errors.required">xa is required</div>
+                                                                <div *ngIf="f.xa.errors.required">Xã is required</div>
                                                             </div>
                                                         </div>
                                         
@@ -96,8 +96,8 @@
                                         
                                                     <div class="form-group form-check">
                                                         <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
-                                                        <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
-                                                        <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                                                        <label for="acceptTerms" class="form-check-label" style="margin-left: 15px;margin-top: 5px">Xác nhận điều khoản</label>
+                                                        <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Xác nhận điều khoản is required</div>
                                                     </div>
                                                     
                                         
@@ -110,8 +110,8 @@
                                             </div>
                                             
                                             <div class="text-center">
-                                                <button class="popup-fahasa-default-alert-confirm" (click)="onSubmit()"> Thanh toán</button>
-                                                <button class="popup-fahasa-default-alert-cancel" (click)="onCance()">Trở lại</button>
+                                                <button class="popup-fahasa-default-alert-confirm hvr-grow" (click)="onSubmit()" style="margin-right: 10px">Thanh toán</button>
+                                                <button class="popup-fahasa-default-alert-cancel hvr-grow" (click)="onCance()"style="margin-left: 10px">Trở lại</button>
                                             </div>
                                         </div>
                                           
